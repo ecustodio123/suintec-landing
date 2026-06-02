@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Landing Starter Kit"
+    "title": "SUINTEC | Industrial Technology Supplies"
   },
   "language": {
     "switchLabel": "Language",
@@ -8,46 +8,44 @@
     "es": "ES"
   },
   "logo": {
-    "subtitle": "Starter Landing Kit"
+    "subtitle": "Industrial Technology Supplies"
   },
   "header": {
-    "homeAria": "Go to homepage",
-    "navAria": "Primary navigation"
+    "homeAria": "Go to SUINTEC homepage",
+    "navAria": "Primary navigation",
+    "whatsappCta": "Quote now"
   },
   "navigation": {
     "home": "Home",
-    "components": "Components",
-    "about": "About",
+    "about": "About us",
+    "pumps": "Pumps",
+    "motors": "Motors",
+    "panels": "Panels",
+    "accessories": "Accessories",
     "contact": "Contact"
   },
   "social": {
     "facebook": "Facebook",
     "instagram": "Instagram",
-    "tiktok": "TikTok"
+    "whatsapp": "WhatsApp"
+  },
+  "whatsapp": {
+    "ariaLabel": "Request a quote on WhatsApp",
+    "label": "WhatsApp"
   },
   "business": {
-    "phoneHref": "9737919770",
-    "phoneDisplay": "973-791-9770",
-    "whatsappHref": "https://wa.me/19737919770?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment.",
+    "phoneHref": "+51123456789",
+    "phoneDisplay": "+51 123 456 789",
+    "whatsappHref": "https://wa.me/51123456789?text=Hello%2C%20I%20would%20like%20to%20request%20an%20industrial%20quote.",
     "social": {
       "facebook": "https://www.facebook.com/",
       "instagram": "https://www.instagram.com/",
-      "tiktok": "https://www.tiktok.com/"
+      "whatsapp": "https://wa.me/51123456789?text=Hello%2C%20I%20would%20like%20to%20request%20an%20industrial%20quote."
     }
   },
   "mainNav": {
-    "categories": {
-      "skinConditions": "Skin Conditions",
-      "procedures": "Procedures",
-      "laserEnergy": "Laser & Energy",
-      "esthetics": "Esthetics"
-    },
-    "options": {
-      "option1": "Option 1",
-      "option2": "Option 2",
-      "option3": "Option 3",
-      "option4": "Option 4"
-    }
+    "categories": {},
+    "options": {}
   },
   "carousel": {
     "previous": "Show previous",
@@ -57,195 +55,198 @@
   },
   "home": {
     "hero": {
-      "title": "Build premium landing pages faster with a reusable starter",
-      "description": "This white-label app includes routing, design tokens, responsive blocks, and reusable components ready to adapt for any business niche.",
-      "cta": "Start New Landing",
-      "imageAlt": "Starter hero"
-    },
-    "hero2": {
-      "kicker": "Reusable Alternate Hero",
-      "title": "Visual hero with prop-based variants",
-      "description": "Use variant=\"a\" or variant=\"b\" to switch the style without duplicating components while keeping your white-label base ready.",
-      "cta": "Book a consultation",
-      "imageAlt": "Smiling person in alternate hero block",
-      "badgeValue": "15+",
-      "badgeLabel": "Years of experience"
+      "title": "Industrial solutions that drive productivity",
+      "description": "We supply water pumps, motors, electrical panels, and industrial accessories for demanding projects, with technical attention and a B2B focus.",
+      "primaryCta": "View products",
+      "secondaryCta": "Request a quote",
+      "imageAlt": "Industrial system with pumping and control equipment"
     },
     "aboutTeaser": {
-      "kicker": "Reusable Block",
-      "title": "About teaser to present your value proposition",
-      "description": "This block summarizes core strengths and routes users to a deeper detail page.",
-      "listAria": "About teaser strengths",
-      "point1": "Compatible with white-label and multi-industry projects",
-      "point2": "Decoupled copy and image for quick adaptation",
-      "point3": "Configurable CTA to fit your funnel",
-      "cta": "View more components",
-      "imageAlt": "Team assisting a satisfied customer"
-    },
-    "servicesBlock2": {
-      "title": "Featured Services (Reusable Block)",
-      "description": "Expanded services grid with key points and support chips.",
-      "intro": "Use it when you need to explain services clearly at scale with a structure ready for larger catalogs.",
-      "supportTitle": "Complementary services",
-      "cta": "Chat on WhatsApp",
-      "allServicesCta": "View all components"
-    },
-    "ctaStrip": {
-      "kicker": "CTA Block",
-      "title": "Conversion-focused CTA strip",
-      "description": "Ideal for pushing quick booking via WhatsApp or phone with minimal friction.",
-      "primaryCta": "Book on WhatsApp",
-      "secondaryCta": "Call now"
-    },
-    "socialLinksBlock": {
-      "title": "Social Links (Reusable Component)",
-      "description": "Social icon set ready to use in footer, contact, or promotional sections."
+      "kicker": "About us",
+      "title": "Reliable supplies for industrial operations",
+      "description": "SUINTEC supports contractors, engineers, and companies with technology solutions for pumping systems, electrical automation, and industrial equipment.",
+      "listAria": "SUINTEC strengths",
+      "point1": "Equipment selection based on technical project requirements",
+      "point2": "Supply for construction, maintenance, and continuous operation",
+      "point3": "Specialized commercial attention for industrial clients",
+      "cta": "Request guidance",
+      "imageAlt": "Industrial equipment and technical staff in a plant"
     },
     "servicesBlock": {
-      "title": "Reusable Service Cards Carousel",
-      "description": "Click-and-drag loop carousel with mobile autoplay that you can reuse in landing pages."
+      "title": "Our categories",
+      "description": "Equipment and supplies selected for industrial, commercial, and construction applications."
+    },
+    "servicesBlock2": {
+      "title": "Solutions for industrial systems",
+      "description": "We combine technical supply and application criteria so each component fits the working environment.",
+      "intro": "We work with companies that need operational continuity, efficiency, and support in equipment selection.",
+      "supportTitle": "Advantages of working with SUINTEC",
+      "cta": "Talk to an advisor",
+      "allServicesCta": "View all solutions"
+    },
+    "whyChooseUs": {
+      "title": "Why choose us",
+      "description": "We combine product quality, technical support, and service oriented to real industrial projects."
+    },
+    "ctaStrip": {
+      "kicker": "Contact",
+      "title": "Need a quote for your project?",
+      "description": "Tell us which equipment or system you need and our commercial team will help define the best alternative.",
+      "primaryCta": "Quote via WhatsApp",
+      "secondaryCta": "Call now"
+    },
+    "hero2": {
+      "kicker": "Industrial solution",
+      "title": "Equipment for demanding projects",
+      "description": "Industrial supplies with technical support.",
+      "cta": "Contact",
+      "imageAlt": "Industrial equipment",
+      "badgeValue": "B2B",
+      "badgeLabel": "Technical service"
+    },
+    "socialLinksBlock": {
+      "title": "Social media",
+      "description": "SUINTEC contact channels."
     },
     "testimonialsBlock": {
-      "title": "Testimonials Section",
-      "description": "Simple reusable card grid for social proof."
+      "title": "Industrial trust",
+      "description": "Clients that require reliable supplies."
     }
   },
   "contactBlock": {
-    "title": "Contact Block",
-    "description": "Reusable contact section with form + map.",
+    "title": "Contact",
+    "description": "Request a quote or technical advice for pumps, motors, panels, and industrial accessories.",
     "fields": {
-      "fullName": "Full Name*",
+      "fullName": "Full name*",
       "phone": "Phone*",
       "email": "Email*",
-      "interestedIn": "Interested in",
-      "message": "Message"
+      "interestedIn": "Product of interest",
+      "message": "Tell us about your requirement"
     },
     "options": {
-      "option1": "Option 1",
-      "option2": "Option 2",
-      "option3": "Option 3"
+      "option1": "Water pumps",
+      "option2": "Industrial motors",
+      "option3": "Panels and accessories"
     },
     "sending": "Sending...",
     "feedback": {
       "success": "Message sent successfully. We will contact you soon.",
-      "error": "We could not send your message. Please try again in a moment.",
+      "error": "We could not send the message. Please try again in a few minutes.",
       "configError": "EmailJS environment variables are missing."
     },
-    "submit": "Submit",
-    "mapTitle": "Demo map"
+    "submit": "Send request",
+    "mapTitle": "SUINTEC reference location"
   },
   "pages": {
     "components": {
-      "title": "Components Showcase",
+      "title": "Components showcase",
       "description": "Reusable primitives and composites.",
-      "buttonPrimary": "Primary Button",
-      "buttonSecondary": "Secondary Button",
-      "buttonOutline": "Outline Button"
+      "buttonPrimary": "Primary button",
+      "buttonSecondary": "Secondary button",
+      "buttonOutline": "Outline button"
     },
     "notFound": {
-      "title": "404 - Page Not Found",
-      "description": "This route is not available in the starter kit.",
-      "backHome": "Back Home"
+      "title": "404 - Page not found",
+      "description": "This route is not available.",
+      "backHome": "Back home"
     }
   },
   "footer": {
-    "title": "Landing Starter Kit",
-    "description": "Reusable React + Tailwind + Router foundation for fast client delivery.",
+    "title": "SUINTEC",
+    "description": "Industrial technology supplies for pumping, power, electrical control, and accessories.",
     "highlights": {
-      "cloneBuild": "Ready for clone-and-build workflow",
-      "tokenBased": "Token-based theming",
-      "responsive": "Responsive defaults"
+      "cloneBuild": "Guaranteed quality",
+      "tokenBased": "Specialized technical support",
+      "responsive": "Reliable industrial solutions"
     },
-    "rights": "© 2026 Landing Starter Kit. Built for reusable freelance workflows."
+    "rights": "© 2026 SUINTEC. All rights reserved."
   },
   "catalog": {
     "serviceShowcase": {
-      "generalConsultation": {
-        "title": "General Consultation",
-        "description": "Comprehensive evaluation to identify current status and top priorities.",
-        "point1": "Initial clinical check",
-        "point2": "Treatment guidance",
-        "point3": "Recommended follow-up plan"
+      "pumpingSystems": {
+        "title": "Pumping systems",
+        "description": "Equipment for water movement, pressure, and supply in industrial operations.",
+        "point1": "Pumps for industrial and commercial applications",
+        "point2": "Options for flow, pressure, and operational continuity",
+        "point3": "Support in selection by working conditions"
       },
-      "cardiologyConsultation": {
-        "title": "Cardiology Consultation",
-        "description": "Specialized service block for cases requiring cardiac monitoring.",
-        "point1": "Complete cardiovascular evaluation",
-        "point2": "Early finding detection",
-        "point3": "Management recommendations",
-        "point4": "Periodic control by risk level"
+      "motorDrive": {
+        "title": "Power and motion",
+        "description": "Motors and components for processes that need stable performance and efficiency.",
+        "point1": "Electric motors for different capacities",
+        "point2": "Focus on efficiency and durability",
+        "point3": "Alternatives for maintenance and replacement"
       },
-      "traumatologyConsultation": {
-        "title": "Traumatology Consultation",
-        "description": "Care for mobility issues and functional recovery.",
-        "point1": "Functional diagnosis",
-        "point2": "Rehabilitation plan",
-        "point3": "Progress follow-up"
+      "electricalIntegration": {
+        "title": "Electrical control",
+        "description": "Panels and control solutions to protect, operate, and organize industrial systems.",
+        "point1": "Power, command, and protection panels",
+        "point2": "Configuration by application and load",
+        "point3": "Components for safe operation"
       },
-      "dermatologyConsultation": {
-        "title": "Dermatology Consultation",
-        "description": "Skin and coat care focused on root causes.",
-        "point1": "Dermatology assessment",
-        "point2": "Care protocol",
-        "point3": "Recurrence control"
-      },
-      "ophthalmologyConsultation": {
-        "title": "Ophthalmology Consultation",
-        "description": "Eye checkups for detection and prevention of visual complications.",
-        "point1": "Baseline eye exam",
-        "point2": "Symptom management",
-        "point3": "Preventive control"
-      },
-      "abdominalUltrasound": {
-        "title": "Abdominal Ultrasound",
-        "description": "Complementary study to support diagnosis and treatment decisions.",
-        "point1": "Non-invasive evaluation",
-        "point2": "Diagnostic support",
-        "point3": "Follow-up reporting"
+      "technicalSupply": {
+        "title": "Technical supply",
+        "description": "Accessories, connections, and related equipment to complete industrial installations.",
+        "point1": "Components compatible with existing systems",
+        "point2": "Supply for construction, maintenance, and operation",
+        "point3": "Specialized service for B2B purchases"
       }
     },
     "serviceSupport": {
-      "microchipId": "Microchip identification",
-      "pharmacy": "Specialized pharmacy",
-      "petShop": "Pet shop",
-      "homeGuidance": "Home care guidance",
-      "postoperativeFollowup": "Postoperative follow-up",
-      "chronicDiseaseControl": "Chronic condition control"
+      "quality": "Quality",
+      "technicalSupport": "Technical support",
+      "reliableSolutions": "Reliable solutions",
+      "specializedAttention": "Specialized attention"
+    },
+    "whyChooseUs": {
+      "quality": {
+        "title": "Quality",
+        "description": "Supplies selected to respond to industrial conditions and demanding projects."
+      },
+      "technicalSupport": {
+        "title": "Technical support",
+        "description": "Guidance to choose equipment compatible with flow, power, load, and operation environment."
+      },
+      "reliableSolutions": {
+        "title": "Reliable solutions",
+        "description": "Practical proposals for operational continuity, maintenance, and new installations."
+      },
+      "specializedAttention": {
+        "title": "Specialized attention",
+        "description": "Direct communication for contractors, engineers, purchasing teams, and industrial companies."
+      }
     },
     "services": {
-      "landingArchitecture": {
-        "title": "Landing Architecture",
-        "description": "Prebuilt sections to launch polished one-page and multipage websites."
+      "cta": "Quote",
+      "pumps": {
+        "title": "Pumps",
+        "description": "Water pumps for industrial, commercial, and pressure system applications."
       },
-      "designTokens": {
-        "title": "Design Tokens",
-        "description": "Centralized colors and spacing to rebrand projects in minutes."
+      "motors": {
+        "title": "Motors",
+        "description": "Electric motors and power solutions for industrial equipment and processes."
       },
-      "reusableComponents": {
-        "title": "Reusable Components",
-        "description": "Buttons, cards, headers, and content blocks built for speed."
+      "panels": {
+        "title": "Panels",
+        "description": "Electrical control, protection, and command panels for industrial installations."
       },
-      "responsiveFirst": {
-        "title": "Responsive First",
-        "description": "Layouts tuned for mobile, tablet, and desktop from day one."
-      },
-      "showcasePage": {
-        "title": "Showcase Page",
-        "description": "A /components view to audit reusable UI before project delivery."
+      "accessories": {
+        "title": "Accessories",
+        "description": "Accessories, connections, and complementary components for industrial systems."
       }
     },
     "testimonials": {
-      "projectOwner": {
-        "name": "Project Owner",
-        "text": "The starter kit reduced setup time and gave us a clean structure for future client pages."
+      "contractor": {
+        "name": "Industrial contractor",
+        "text": "The technical attention helped us define pumps and accessories for the jobsite without losing time on incomplete specifications."
       },
-      "frontendDeveloper": {
-        "name": "Frontend Developer",
-        "text": "Reusable blocks and tokens made branding changes extremely fast."
+      "engineering": {
+        "name": "Engineering team",
+        "text": "We value having clear alternatives for motors, panels, and components compatible with our installations."
       },
-      "freelanceTeam": {
-        "name": "Freelance Team",
-        "text": "We now clone one repo and ship customized landings in a fraction of the time."
+      "maintenance": {
+        "name": "Maintenance lead",
+        "text": "SUINTEC helps us solve replacement and operation requirements with direct, reliable communication."
       }
     }
   }

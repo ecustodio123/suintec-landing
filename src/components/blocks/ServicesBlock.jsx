@@ -1,6 +1,5 @@
 import { services } from "../../data/demoContent";
 import { useI18n } from "../../lang/i18n";
-import LoopCarousel from "../composites/LoopCarousel";
 import ServiceCard from "../composites/ServiceCard";
 import Container from "../primitives/Container";
 import SectionHeading from "../primitives/SectionHeading";
@@ -9,23 +8,24 @@ function ServicesBlock() {
   const { t } = useI18n();
 
   return (
-    <section className="surface-section">
+    <section className="surface-section" id="productos">
       <Container>
         <SectionHeading title={t("home.servicesBlock.title")} description={t("home.servicesBlock.description")} />
-        <LoopCarousel
-          items={services}
-          renderItem={(item, key) => (
+        <div className="card-grid four">
+          {services.map((item) => (
             <ServiceCard
-              key={key}
+              key={item.id}
               item={{
+                id: item.anchor,
                 image: item.image,
                 title: t(`catalog.services.${item.id}.title`),
                 description: t(`catalog.services.${item.id}.description`),
+                ctaLabel: t("catalog.services.cta"),
+                ctaHref: "#contacto",
               }}
             />
-          )}
-          visibleItems={4}
-        />
+          ))}
+        </div>
       </Container>
     </section>
   );

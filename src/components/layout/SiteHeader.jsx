@@ -1,4 +1,4 @@
-import PhoneIcon from "@mui/icons-material/Phone";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { NavLink } from "react-router-dom";
 import { mainNavDropdowns, topNavLinks } from "../../data/navigation";
 import { useI18n } from "../../lang/i18n";
@@ -17,33 +17,41 @@ function SiteHeader() {
         </NavLink>
 
         <nav className="header-links" aria-label={t("header.navAria")}>
-          {topNavLinks.map((link) => (
-            <NavLink
-              key={link.key}
-              to={link.to}
-              end={link.to === "/"}
-              className={({ isActive }) => (isActive ? "active" : "")}
-            >
-              {t(`navigation.${link.key}`)}
-            </NavLink>
-          ))}
-          <a className="header-phone" href={`tel:${t("business.phoneHref")}`}>
-            <PhoneIcon sx={{ fontSize: 15, marginBottom: "-2px" }} /> {t("business.phoneDisplay")}
+          {topNavLinks.map((link) =>
+            link.to.startsWith("#") ? (
+              <a key={link.key} href={link.to}>
+                {t(`navigation.${link.key}`)}
+              </a>
+            ) : (
+              <NavLink
+                key={link.key}
+                to={link.to}
+                end={link.to === "/"}
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                {t(`navigation.${link.key}`)}
+              </NavLink>
+            ),
+          )}
+          <a className="header-phone" href={t("business.whatsappHref")} target="_blank" rel="noreferrer">
+            <WhatsAppIcon sx={{ fontSize: 17, marginBottom: "-2px" }} /> {t("header.whatsappCta")}
           </a>
         </nav>
       </Container>
 
-      <div className="main-nav-wrap">
-        <Container className="main-nav">
-          {mainNavDropdowns.map((entry) => (
-            <MainNavDropdown
-              key={entry.key}
-              label={t(`mainNav.categories.${entry.key}`)}
-              options={entry.optionKeys.map((optionKey) => t(`mainNav.options.${optionKey}`))}
-            />
-          ))}
-        </Container>
-      </div>
+      {mainNavDropdowns.length ? (
+        <div className="main-nav-wrap">
+          <Container className="main-nav">
+            {mainNavDropdowns.map((entry) => (
+              <MainNavDropdown
+                key={entry.key}
+                label={t(`mainNav.categories.${entry.key}`)}
+                options={entry.optionKeys.map((optionKey) => t(`mainNav.options.${optionKey}`))}
+              />
+            ))}
+          </Container>
+        </div>
+      ) : null}
     </header>
   );
 }

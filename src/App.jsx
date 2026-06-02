@@ -3,6 +3,7 @@ import SiteFooter from "./components/layout/SiteFooter";
 import SiteHeader from "./components/layout/SiteHeader";
 import LanguageSwitcher from "./components/layout/LanguageSwitcher";
 import ScrollToTop from "./components/layout/ScrollToTop";
+import WhatsAppFloatingButton from "./components/layout/WhatsAppFloatingButton";
 import ComponentsPage from "./pages/ComponentsPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -19,6 +20,7 @@ function App() {
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
       <SiteFooter />
+      <WhatsAppFloatingButton />
       <LanguageSwitcher />
     </>
   );

@@ -36,7 +36,7 @@ function ContactBlock() {
   };
 
   return (
-    <section className="surface-section">
+    <section className="surface-section" id="contacto">
       <Container>
         <SectionHeading title={t("contactBlock.title")} description={t("contactBlock.description")} />
         <div className="contact-block">
@@ -54,7 +54,7 @@ function ContactBlock() {
                 style={{ marginTop: "0.7rem" }}
                 required
               />
-              <select className="select" name="specialty" style={{ marginTop: "0.7rem" }} defaultValue="" required>
+              <select className="select" name="interest" style={{ marginTop: "0.7rem" }} defaultValue="" required>
                 <option value="" disabled>
                   {t("contactBlock.fields.interestedIn")}
                 </option>
@@ -86,7 +86,7 @@ function ContactBlock() {
           <article className="contact-panel">
             <iframe
               title={t("contactBlock.mapTitle")}
-              src="https://maps.google.com/maps?q=New%20Jersey&t=&z=11&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Lima%2C%20Peru&t=&z=11&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
             />
           </article>

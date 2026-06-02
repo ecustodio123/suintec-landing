@@ -4,7 +4,7 @@ import en from "./en.json";
 import es from "./es.json";
 
 const STORAGE_KEY = "site_language";
-const DEFAULT_LANGUAGE = "en";
+const DEFAULT_LANGUAGE = "es";
 
 const dictionaries = {
   en,

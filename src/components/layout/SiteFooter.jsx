@@ -19,13 +19,22 @@ function SiteFooter() {
             <NavLink to="/">{t("navigation.home")}</NavLink>
           </li>
           <li>
-            <NavLink to="/components">{t("navigation.components")}</NavLink>
+            <a href="#quienes-somos">{t("navigation.about")}</a>
           </li>
           <li>
-            <a href="#">{t("navigation.about")}</a>
+            <a href="#bombas">{t("navigation.pumps")}</a>
           </li>
           <li>
-            <a href="#">{t("navigation.contact")}</a>
+            <a href="#motores">{t("navigation.motors")}</a>
+          </li>
+          <li>
+            <a href="#tableros">{t("navigation.panels")}</a>
+          </li>
+          <li>
+            <a href="#accesorios">{t("navigation.accessories")}</a>
+          </li>
+          <li>
+            <a href="#contacto">{t("navigation.contact")}</a>
           </li>
         </ul>
         <ul className="footer-links">

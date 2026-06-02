@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
 import { aboutTeaserImage } from "../../data/demoContent";
 import { useI18n } from "../../lang/i18n";
 import Container from "../primitives/Container";
 
-function HomeAboutTeaserBlock({ ctaTo = "/components" }) {
+function HomeAboutTeaserBlock({ ctaTo = "#contacto" }) {
   const { t } = useI18n();
 
   return (
-    <section className="surface-section">
+    <section className="surface-section" id="quienes-somos">
       <Container>
         <div className="home-about-teaser">
           <div>
@@ -19,9 +18,9 @@ function HomeAboutTeaserBlock({ ctaTo = "/components" }) {
               <li>{t("home.aboutTeaser.point2")}</li>
               <li>{t("home.aboutTeaser.point3")}</li>
             </ul>
-            <Link className="btn btn-outline" to={ctaTo}>
+            <a className="btn btn-outline" href={ctaTo}>
               {t("home.aboutTeaser.cta")}
-            </Link>
+            </a>
           </div>
 
           <div className="home-about-teaser__media">
