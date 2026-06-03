@@ -1,15 +1,13 @@
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
 import { useI18n } from "../../lang/i18n";
 
 const SOCIAL_ICONS = {
-  facebook: FaFacebookF,
-  instagram: FaInstagram,
-  whatsapp: FaWhatsapp,
+  linkedin: FaLinkedinIn,
 };
 
 function SocialLinks({ className = "", tone = "default" }) {
   const { t } = useI18n();
-  const items = ["facebook", "instagram", "whatsapp"];
+  const items = ["linkedin"];
 
   return (
     <div className={`social-links ${tone === "footer" ? "social-links--footer" : ""} ${className}`.trim()}>

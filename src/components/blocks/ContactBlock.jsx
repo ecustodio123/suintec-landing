@@ -84,9 +84,16 @@ function ContactBlock() {
           </article>
 
           <article className="contact-panel">
+            <div className="contact-details">
+              <h3>{t("contactBlock.infoTitle")}</h3>
+              <p>{t("business.address")}</p>
+              <a href={t("business.whatsappHref")} target="_blank" rel="noreferrer">
+                {t("contactBlock.whatsappLabel")}: {t("business.phoneDisplay")}
+              </a>
+            </div>
             <iframe
               title={t("contactBlock.mapTitle")}
-              src="https://maps.google.com/maps?q=Lima%2C%20Peru&t=&z=11&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Garcilazo%20de%20la%20Vega%2C%20Urb.%20Salamanca%2C%20Ate%2C%20Lima&t=&z=15&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
             />
           </article>

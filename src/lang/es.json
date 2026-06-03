@@ -25,22 +25,19 @@
     "contact": "Contacto"
   },
   "social": {
-    "facebook": "Facebook",
-    "instagram": "Instagram",
-    "whatsapp": "WhatsApp"
+    "linkedin": "LinkedIn"
   },
   "whatsapp": {
     "ariaLabel": "Cotizar por WhatsApp",
     "label": "WhatsApp"
   },
   "business": {
-    "phoneHref": "+51123456789",
-    "phoneDisplay": "+51 123 456 789",
-    "whatsappHref": "https://wa.me/51123456789?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20industrial.",
+    "phoneHref": "+51955483364",
+    "phoneDisplay": "+51 955 483 364",
+    "whatsappHref": "https://wa.me/51955483364?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20industrial.",
+    "address": "Garcilazo de la Vega, Urb. Salamanca, Ate, Lima",
     "social": {
-      "facebook": "https://www.facebook.com/",
-      "instagram": "https://www.instagram.com/",
-      "whatsapp": "https://wa.me/51123456789?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20industrial."
+      "linkedin": "https://www.linkedin.com/"
     }
   },
   "mainNav": {
@@ -116,6 +113,8 @@
   "contactBlock": {
     "title": "Contacto",
     "description": "Solicita una cotización o asesoría técnica para bombas, motores, tableros y accesorios industriales.",
+    "infoTitle": "Datos de contacto",
+    "whatsappLabel": "WhatsApp",
     "fields": {
       "fullName": "Nombre completo*",
       "phone": "Teléfono*",
@@ -135,7 +134,7 @@
       "configError": "Faltan variables de entorno de EmailJS."
     },
     "submit": "Enviar solicitud",
-    "mapTitle": "Ubicación referencial de SUINTEC"
+    "mapTitle": "Ubicación de SUINTEC en Ate, Lima"
   },
   "pages": {
     "components": {

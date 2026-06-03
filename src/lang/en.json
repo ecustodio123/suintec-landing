@@ -25,22 +25,19 @@
     "contact": "Contact"
   },
   "social": {
-    "facebook": "Facebook",
-    "instagram": "Instagram",
-    "whatsapp": "WhatsApp"
+    "linkedin": "LinkedIn"
   },
   "whatsapp": {
     "ariaLabel": "Request a quote on WhatsApp",
     "label": "WhatsApp"
   },
   "business": {
-    "phoneHref": "+51123456789",
-    "phoneDisplay": "+51 123 456 789",
-    "whatsappHref": "https://wa.me/51123456789?text=Hello%2C%20I%20would%20like%20to%20request%20an%20industrial%20quote.",
+    "phoneHref": "+51955483364",
+    "phoneDisplay": "+51 955 483 364",
+    "whatsappHref": "https://wa.me/51955483364?text=Hello%2C%20I%20would%20like%20to%20request%20an%20industrial%20quote.",
+    "address": "Garcilazo de la Vega, Urb. Salamanca, Ate, Lima",
     "social": {
-      "facebook": "https://www.facebook.com/",
-      "instagram": "https://www.instagram.com/",
-      "whatsapp": "https://wa.me/51123456789?text=Hello%2C%20I%20would%20like%20to%20request%20an%20industrial%20quote."
+      "linkedin": "https://www.linkedin.com/company/suintec-peru"
     }
   },
   "mainNav": {
@@ -116,6 +113,8 @@
   "contactBlock": {
     "title": "Contact",
     "description": "Request a quote or technical advice for pumps, motors, panels, and industrial accessories.",
+    "infoTitle": "Contact details",
+    "whatsappLabel": "WhatsApp",
     "fields": {
       "fullName": "Full name*",
       "phone": "Phone*",
@@ -135,7 +134,7 @@
       "configError": "EmailJS environment variables are missing."
     },
     "submit": "Send request",
-    "mapTitle": "SUINTEC reference location"
+    "mapTitle": "SUINTEC location in Ate, Lima"
   },
   "pages": {
     "components": {

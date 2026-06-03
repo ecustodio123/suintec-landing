@@ -604,11 +604,6 @@
   height: 1rem;
 }
 
-.social-links__item--tiktok svg {
-  width: 0.95rem;
-  height: 0.95rem;
-}
-
 .social-links--footer .social-links__item {
   border-color: rgba(255, 255, 255, 0.24);
   color: #fff5e7;
@@ -988,6 +983,29 @@
   border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-lg);
   padding: 1rem;
+}
+
+.contact-details {
+  margin-bottom: 0.85rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-details h3 {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 1rem;
+}
+
+.contact-details p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.contact-details a {
+  color: var(--color-primary-700);
+  font-weight: 800;
 }
 
 .contact-panel iframe {
