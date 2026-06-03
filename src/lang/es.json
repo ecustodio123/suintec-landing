@@ -13,6 +13,9 @@
   "header": {
     "homeAria": "Ir al inicio de SUINTEC",
     "navAria": "Navegación principal",
+    "mobileNavAria": "Navegación móvil",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
     "whatsappCta": "Cotizar ahora"
   },
   "navigation": {
