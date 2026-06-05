@@ -5,8 +5,7 @@
   "language": {
     "switchLabel": "Language",
     "en": "EN",
-    "es": "ES",
-    "pt": "PT"
+    "es": "ES"
   },
   "logo": {
     "subtitle": "Industrial Technology Supplies"
@@ -22,6 +21,8 @@
   "navigation": {
     "home": "Home",
     "about": "About us",
+    "aplicaciones": "Applications",
+    "soluciones": "Solutions",
     "pumps": "Pumps",
     "motors": "Motors",
     "panels": "Panels",
@@ -56,8 +57,8 @@
   },
   "home": {
     "hero": {
-      "title": "Industrial solutions that drive productivity",
-      "description": "We supply water pumps, motors, electrical panels, and industrial accessories for demanding projects, with technical attention and a B2B focus.",
+      "title": "[Industrial] equipment for your most demanding projects",
+      "description": "We supply water pumps, motors, electrical panels, and industrial accessories with technical advice and direct service.",
       "primaryCta": "View products",
       "secondaryCta": "Request a quote",
       "imageAlt": "Industrial system with pumping and control equipment"
@@ -112,6 +113,33 @@
     "testimonialsBlock": {
       "title": "Industrial trust",
       "description": "Clients that require reliable supplies."
+    }
+  },
+  "stats": {
+    "experience": "Years in the market",
+    "brands": "Partner brands",
+    "equipment": "Equipment supplied"
+  },
+  "applications": {
+    "title": "Applications",
+    "description": "We support different sectors with pumping and equipment solutions adapted to the demands of each operation.",
+    "items": {
+      "agriculture": {
+        "title": "Agriculture",
+        "description": "Comprehensive solutions for the agro-industrial sector: fertigation and fertilizer dosing, water transfer and extraction from deep wells, reservoir cleaning, and chemical dosing pumps, with a focus on efficiency and durability."
+      },
+      "construction": {
+        "title": "Construction",
+        "description": "Safe and operational job sites with constant-pressure and hydropneumatic systems, wastewater and septic management, and fire-fighting pumps compliant with the NFPA standard."
+      },
+      "industry": {
+        "title": "Industry",
+        "description": "Robust solutions for production and manufacturing processes, fluid handling in chemical and petrochemical industries, and applications for food, beverage, and pharmaceutical, with precise flows and operational safety."
+      },
+      "sanitation": {
+        "title": "Sanitation",
+        "description": "Management, transfer, and treatment of wastewater in municipal and industrial plants, with dosing pumps for chemical treatment, contributing to environmental care and public health."
+      }
     }
   },
   "about": {

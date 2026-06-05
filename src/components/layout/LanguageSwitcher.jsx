@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "../../lang/i18n";
 
+const LANGUAGES = ["es", "en"];
+
 function LanguageSwitcher() {
   const { language, setLanguage, t } = useI18n();
   const [open, setOpen] = useState(false);
@@ -37,40 +39,24 @@ function LanguageSwitcher() {
         aria-expanded={open}
         onClick={() => setOpen((prev) => !prev)}
       >
-        {t("language.switchLabel")} · {t(`language.${language}`)}
+        <span className="language-fab__label">{t("language.switchLabel")}</span>
+        <span className="language-fab__code">{t(`language.${language}`)}</span>
       </button>
 
       <div className="language-fab__menu" role="menu" aria-label={t("language.switchLabel")}>
-        <button
-          type="button"
-          className={`language-fab__option ${language === "en" ? "is-active" : ""}`.trim()}
-          onClick={() => {
-            setLanguage("en");
-            setOpen(false);
-          }}
-        >
-          {t("language.en")}
-        </button>
-        <button
-          type="button"
-          className={`language-fab__option ${language === "es" ? "is-active" : ""}`.trim()}
-          onClick={() => {
-            setLanguage("es");
-            setOpen(false);
-          }}
-        >
-          {t("language.es")}
-        </button>
-        <button
-          type="button"
-          className={`language-fab__option ${language === "pt" ? "is-active" : ""}`.trim()}
-          onClick={() => {
-            setLanguage("pt");
-            setOpen(false);
-          }}
-        >
-          {t("language.pt")}
-        </button>
+        {LANGUAGES.map((code) => (
+          <button
+            key={code}
+            type="button"
+            className={`language-fab__option ${language === code ? "is-active" : ""}`.trim()}
+            onClick={() => {
+              setLanguage(code);
+              setOpen(false);
+            }}
+          >
+            {t(`language.${code}`)}
+          </button>
+        ))}
       </div>
     </div>
   );

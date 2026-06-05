@@ -5,8 +5,7 @@
   "language": {
     "switchLabel": "Idioma",
     "en": "EN",
-    "es": "ES",
-    "pt": "PT"
+    "es": "ES"
   },
   "logo": {
     "subtitle": "Suministros Industriales Tecnológicos"
@@ -21,7 +20,9 @@
   },
   "navigation": {
     "home": "Inicio",
-    "about": "Quienes somos",
+    "about": "Quiénes somos",
+    "aplicaciones": "Aplicaciones",
+    "soluciones": "Soluciones",
     "pumps": "Bombas",
     "motors": "Motores",
     "panels": "Tableros",
@@ -56,14 +57,14 @@
   },
   "home": {
     "hero": {
-      "title": "Soluciones industriales a tu alcance",
-      "description": "Suministramos bombas de agua, motores, tableros eléctricos y accesorios industriales para proyectos exigentes, con atención técnica y enfoque B2B.",
+      "title": "Equipamiento [industrial] para tus proyectos más exigentes",
+      "description": "Suministramos bombas de agua, motores, tableros eléctricos y accesorios industriales con asesoría técnica y atención directa.",
       "primaryCta": "Ver productos",
       "secondaryCta": "Cotizar ahora",
       "imageAlt": "Sistema industrial con equipos de bombeo y control"
     },
     "aboutTeaser": {
-      "kicker": "Quienes somos",
+      "kicker": "Quiénes somos",
       "title": "Suministros confiables para operaciones industriales",
       "description": "SUINTEC acompaña a contratistas, ingenieros y empresas con soluciones tecnológicas para sistemas de bombeo, automatización eléctrica y equipamiento industrial.",
       "listAria": "Fortalezas de SUINTEC",
@@ -112,6 +113,33 @@
     "testimonialsBlock": {
       "title": "Confianza industrial",
       "description": "Clientes que requieren suministros confiables."
+    }
+  },
+  "stats": {
+    "experience": "Años en el mercado",
+    "brands": "Marcas aliadas",
+    "equipment": "Equipos suministrados"
+  },
+  "applications": {
+    "title": "Aplicaciones",
+    "description": "Acompañamos a distintos sectores con soluciones de bombeo y equipamiento adaptadas a las exigencias de cada operación.",
+    "items": {
+      "agriculture": {
+        "title": "Agricultura",
+        "description": "Soluciones integrales para el sector agroindustrial: fertirriego y dosificación de fertilizantes, trasvase y extracción de agua en pozos profundos, limpieza de reservorios y bombas dosificadoras de químicos, con foco en eficiencia y durabilidad."
+      },
+      "construction": {
+        "title": "Construcción",
+        "description": "Obras seguras y operativas con sistemas de presión constante e hidroneumáticos, manejo de aguas residuales y sistemas sépticos, y bombas contra incendios conforme a la norma NFPA."
+      },
+      "industry": {
+        "title": "Industria",
+        "description": "Soluciones robustas para procesos de producción y fabricación, manejo de fluidos en química y petroquímica, y aplicaciones para alimentación, bebidas y farmacéutica, con flujos precisos y seguridad operativa."
+      },
+      "sanitation": {
+        "title": "Saneamiento",
+        "description": "Manejo, traslado y tratamiento de aguas residuales en plantas municipales e industriales, con bombas dosificadoras para tratamiento químico, contribuyendo al cuidado del medio ambiente y la salud pública."
+      }
     }
   },
   "about": {

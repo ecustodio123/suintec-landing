@@ -1,10 +1,8 @@
 export const topNavLinks = [
   { key: "home", to: "/" },
   { key: "about", to: "#quienes-somos" },
-  { key: "pumps", to: "#bombas" },
-  { key: "motors", to: "#motores" },
-  { key: "panels", to: "#tableros" },
-  { key: "accessories", to: "#accesorios" },
+  { key: "aplicaciones", to: "#aplicaciones" },
+  { key: "soluciones", to: "#soluciones" },
   { key: "contact", to: "#contacto" },
 ];
 

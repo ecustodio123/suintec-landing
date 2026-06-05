@@ -1,6 +1,7 @@
 import { aboutTeaserImage } from "../../data/demoContent";
 import { useI18n } from "../../lang/i18n";
 import Container from "../primitives/Container";
+import MissionVisionBlock from "./MissionVisionBlock";
 
 function HomeAboutTeaserBlock({ ctaTo = "#contacto" }) {
   const { t } = useI18n();
@@ -18,7 +19,7 @@ function HomeAboutTeaserBlock({ ctaTo = "#contacto" }) {
               <li>{t("home.aboutTeaser.point2")}</li>
               <li>{t("home.aboutTeaser.point3")}</li>
             </ul>
-            <a className="btn btn-outline" href={ctaTo}>
+            <a className="btn btn-primary" href={ctaTo}>
               {t("home.aboutTeaser.cta")}
             </a>
           </div>
@@ -27,6 +28,8 @@ function HomeAboutTeaserBlock({ ctaTo = "#contacto" }) {
             <img src={aboutTeaserImage} alt={t("home.aboutTeaser.imageAlt")} loading="lazy" />
           </div>
         </div>
+
+        <MissionVisionBlock />
       </Container>
     </section>
   );

@@ -1,9 +1,10 @@
+import ApplicationsBlock from "../components/blocks/ApplicationsBlock";
 import ContactBlock from "../components/blocks/ContactBlock";
 import HeroBlock from "../components/blocks/HeroBlock";
 import HomeAboutTeaserBlock from "../components/blocks/HomeAboutTeaserBlock";
 import HomeCtaStripBlock from "../components/blocks/HomeCtaStripBlock";
-import MissionVisionBlock from "../components/blocks/MissionVisionBlock";
 import ServicesBlock from "../components/blocks/ServicesBlock";
+import StatsBlock from "../components/blocks/StatsBlock";
 import ServicesBlock2 from "../components/blocks/ServicesBlock2";
 import WhyChooseUsBlock from "../components/blocks/WhyChooseUsBlock";
 
@@ -12,7 +13,8 @@ function HomePage() {
     <main>
       <HeroBlock />
       <HomeAboutTeaserBlock />
-      <MissionVisionBlock />
+      <StatsBlock />
+      <ApplicationsBlock />
       <ServicesBlock />
       <ServicesBlock2 sectionClassName="surface-section surface-section--soft" showSupport={false} showAllServicesLink={false} />
       <WhyChooseUsBlock />

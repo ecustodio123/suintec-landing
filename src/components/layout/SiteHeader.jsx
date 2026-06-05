@@ -71,10 +71,11 @@ function SiteHeader() {
               </NavLink>
             ),
           )}
-          <a className="header-phone" href={t("business.whatsappHref")} target="_blank" rel="noreferrer">
-            <WhatsAppIcon sx={{ fontSize: 17, marginBottom: "-2px" }} /> {t("header.whatsappCta")}
-          </a>
         </nav>
+
+        <a className="header-phone" href={t("business.whatsappHref")} target="_blank" rel="noreferrer">
+          {t("header.whatsappCta")}
+        </a>
       </Container>
 
       <nav id="mobile-navigation" className="mobile-nav-panel" aria-label={t("header.mobileNavAria")}>

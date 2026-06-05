@@ -1,8 +1,20 @@
+import agricultureImage from "../assets/img/campo-de-cultivo-en-hileras-bajo-cielo-despejado.jpeg";
+import constructionImage from "../assets/img/obra-de-construccion-de-edificios-con-gruas-torr.jpeg";
+import industryImage from "../assets/img/planta-industrial-con-silos-y-torres-al-atardece.jpeg";
+import sanitationImage from "../assets/img/planta-de-tratamiento-de-aguas-residuales-vista.jpeg";
+
 export const heroImage =
   "/images/suintec-hero-industrial.jpg";
 
 export const aboutTeaserImage =
   "/images/suintec-quienes-somos.jpg";
+
+export const applications = [
+  { id: "agriculture", image: agricultureImage },
+  { id: "construction", image: constructionImage },
+  { id: "industry", image: industryImage },
+  { id: "sanitation", image: sanitationImage },
+];
 
 export const services = [
   {
