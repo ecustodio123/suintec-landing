@@ -114,6 +114,16 @@
       "description": "Clientes que requieren suministros confiables."
     }
   },
+  "about": {
+    "mission": {
+      "title": "Misión",
+      "description": "Resolver de principio a fin las necesidades de equipamiento de nuestros clientes: ayudarles a elegir el equipo correcto, suministrarlo con calidad y acompañarlos con un servicio postventa cercano que aporte valor real a cada proyecto."
+    },
+    "vision": {
+      "title": "Visión",
+      "description": "Convertirnos en un referente del suministro industrial en el Perú, reconocidos por la cercanía con nuestros clientes, la innovación en cada propuesta y la capacidad de sostener operaciones eficientes y duraderas."
+    }
+  },
   "contactBlock": {
     "title": "Contacto",
     "description": "Solicita una cotización o asesoría técnica para bombas, motores, tableros y accesorios industriales.",

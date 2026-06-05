@@ -114,6 +114,16 @@
       "description": "Clients that require reliable supplies."
     }
   },
+  "about": {
+    "mission": {
+      "title": "Mission",
+      "description": "To fully resolve our clients' equipment needs: helping them choose the right equipment, supplying it with quality, and supporting them with a close after-sales service that brings real value to every project."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "To become a benchmark in industrial supply in Peru, recognized for our closeness to clients, the innovation in each proposal, and the capacity to sustain efficient and lasting operations."
+    }
+  },
   "contactBlock": {
     "title": "Contact",
     "description": "Request a quote or technical advice for pumps, motors, panels, and industrial accessories.",

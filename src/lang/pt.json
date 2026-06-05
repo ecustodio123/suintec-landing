@@ -114,6 +114,16 @@
       "description": "Clientes que necessitam de suprimentos confiáveis."
     }
   },
+  "about": {
+    "mission": {
+      "title": "Missão",
+      "description": "Resolver de ponta a ponta as necessidades de equipamentos dos nossos clientes: ajudá-los a escolher o equipamento correto, fornecê-lo com qualidade e acompanhá-los com um serviço pós-venda próximo que agregue valor real a cada projeto."
+    },
+    "vision": {
+      "title": "Visão",
+      "description": "Tornarmo-nos referência no fornecimento industrial no Peru, reconhecidos pela proximidade com nossos clientes, a inovação em cada proposta e a capacidade de sustentar operações eficientes e duradouras."
+    }
+  },
   "contactBlock": {
     "title": "Contato",
     "description": "Solicite uma cotação ou assessoria técnica para bombas, motores, painéis e acessórios industriais.",
