@@ -61,6 +61,16 @@ function LanguageSwitcher() {
         >
           {t("language.es")}
         </button>
+        <button
+          type="button"
+          className={`language-fab__option ${language === "pt" ? "is-active" : ""}`.trim()}
+          onClick={() => {
+            setLanguage("pt");
+            setOpen(false);
+          }}
+        >
+          {t("language.pt")}
+        </button>
       </div>
     </div>
   );

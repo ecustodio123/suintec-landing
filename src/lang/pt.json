@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "title": "SUINTEC | Suprimentos Industriais Tecnológicos"
+  },
+  "language": {
+    "switchLabel": "Idioma",
+    "en": "EN",
+    "es": "ES",
+    "pt": "PT"
+  },
+  "logo": {
+    "subtitle": "Suprimentos Industriais Tecnológicos"
+  },
+  "header": {
+    "homeAria": "Ir para a página inicial da SUINTEC",
+    "navAria": "Navegação principal",
+    "mobileNavAria": "Navegação móvel",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "whatsappCta": "Solicitar cotação"
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Quem somos",
+    "pumps": "Bombas",
+    "motors": "Motores",
+    "panels": "Painéis",
+    "accessories": "Acessórios",
+    "contact": "Contato"
+  },
+  "social": {
+    "linkedin": "LinkedIn"
+  },
+  "whatsapp": {
+    "ariaLabel": "Solicitar cotação pelo WhatsApp",
+    "label": "WhatsApp"
+  },
+  "business": {
+    "phoneHref": "+51955483364",
+    "phoneDisplay": "+51 955 483 364",
+    "whatsappHref": "https://wa.me/51955483364?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20industrial.",
+    "address": "Garcilazo de la Vega, Urb. Salamanca, Ate, Lima",
+    "social": {
+      "linkedin": "https://www.linkedin.com/company/suintec-peru"
+    }
+  },
+  "mainNav": {
+    "categories": {},
+    "options": {}
+  },
+  "carousel": {
+    "previous": "Mostrar anterior",
+    "next": "Mostrar próximo",
+    "controls": "Controles do carrossel",
+    "goToView": "Ir para a visualização"
+  },
+  "home": {
+    "hero": {
+      "title": "Soluções industriais ao seu alcance",
+      "description": "Fornecemos bombas d'água, motores, painéis elétricos e acessórios industriais para projetos exigentes, com atendimento técnico e foco B2B.",
+      "primaryCta": "Ver produtos",
+      "secondaryCta": "Solicitar cotação",
+      "imageAlt": "Sistema industrial com equipamentos de bombeamento e controle"
+    },
+    "aboutTeaser": {
+      "kicker": "Quem somos",
+      "title": "Suprimentos confiáveis para operações industriais",
+      "description": "A SUINTEC apoia contratantes, engenheiros e empresas com soluções tecnológicas para sistemas de bombeamento, automação elétrica e equipamentos industriais.",
+      "listAria": "Pontos fortes da SUINTEC",
+      "point1": "Seleção de equipamentos conforme os requisitos técnicos do projeto",
+      "point2": "Abastecimento para obras, manutenção e operação contínua",
+      "point3": "Atendimento comercial especializado para clientes industriais",
+      "cta": "Solicitar assessoria",
+      "imageAlt": "Equipamentos industriais e equipe técnica em planta"
+    },
+    "servicesBlock": {
+      "title": "Nossas categorias",
+      "description": "Equipamentos e suprimentos selecionados para aplicações industriais, comerciais e de construção."
+    },
+    "servicesBlock2": {
+      "title": "Soluções para sistemas industriais",
+      "description": "Integramos suprimento técnico e critério de aplicação para que cada componente responda ao ambiente de trabalho.",
+      "intro": "Trabalhamos com empresas que precisam de continuidade operacional, eficiência e suporte na escolha de equipamentos.",
+      "supportTitle": "Vantagens de trabalhar com a SUINTEC",
+      "cta": "Falar com um consultor",
+      "allServicesCta": "Ver todas as soluções"
+    },
+    "whyChooseUs": {
+      "title": "Por que nos escolher",
+      "description": "Combinamos qualidade de produto, suporte técnico e atendimento voltado a projetos industriais reais."
+    },
+    "ctaStrip": {
+      "kicker": "Contato",
+      "title": "Precisa de uma cotação para o seu projeto?",
+      "description": "Conte-nos qual equipamento ou sistema você precisa e nossa equipe comercial ajudará a definir a melhor alternativa.",
+      "primaryCta": "Cotar pelo WhatsApp",
+      "secondaryCta": "Ligar agora"
+    },
+    "hero2": {
+      "kicker": "Solução industrial",
+      "title": "Equipamentos para projetos exigentes",
+      "description": "Suprimentos industriais com suporte técnico.",
+      "cta": "Contato",
+      "imageAlt": "Equipamento industrial",
+      "badgeValue": "B2B",
+      "badgeLabel": "Atendimento técnico"
+    },
+    "socialLinksBlock": {
+      "title": "Redes sociais",
+      "description": "Canais de contato da SUINTEC."
+    },
+    "testimonialsBlock": {
+      "title": "Confiança industrial",
+      "description": "Clientes que necessitam de suprimentos confiáveis."
+    }
+  },
+  "contactBlock": {
+    "title": "Contato",
+    "description": "Solicite uma cotação ou assessoria técnica para bombas, motores, painéis e acessórios industriais.",
+    "infoTitle": "Dados de contato",
+    "whatsappLabel": "WhatsApp",
+    "fields": {
+      "fullName": "Nome completo*",
+      "phone": "Telefone*",
+      "email": "E-mail*",
+      "interestedIn": "Produto de interesse",
+      "message": "Conte-nos sobre sua necessidade"
+    },
+    "options": {
+      "option1": "Bombas d'água",
+      "option2": "Motores industriais",
+      "option3": "Painéis e acessórios"
+    },
+    "sending": "Enviando...",
+    "feedback": {
+      "success": "Mensagem enviada com sucesso. Entraremos em contato em breve.",
+      "error": "Não foi possível enviar a mensagem. Tente novamente em alguns minutos.",
+      "configError": "Variáveis de ambiente do EmailJS estão ausentes."
+    },
+    "submit": "Enviar solicitação",
+    "mapTitle": "Localização da SUINTEC em Ate, Lima"
+  },
+  "pages": {
+    "components": {
+      "title": "Vitrine de componentes",
+      "description": "Primitivos e compostos reutilizáveis.",
+      "buttonPrimary": "Botão primário",
+      "buttonSecondary": "Botão secundário",
+      "buttonOutline": "Botão outline"
+    },
+    "notFound": {
+      "title": "404 - Página não encontrada",
+      "description": "Esta rota não está disponível.",
+      "backHome": "Voltar ao início"
+    }
+  },
+  "footer": {
+    "title": "SUINTEC",
+    "description": "Suprimentos industriais tecnológicos para sistemas de bombeamento, potência, controle elétrico e acessórios.",
+    "highlights": {
+      "cloneBuild": "Qualidade garantida",
+      "tokenBased": "Suporte técnico especializado",
+      "responsive": "Soluções confiáveis para a indústria"
+    },
+    "rights": "© 2026 SUINTEC. Todos os direitos reservados."
+  },
+  "catalog": {
+    "serviceShowcase": {
+      "pumpingSystems": {
+        "title": "Sistemas de bombeamento",
+        "description": "Equipamentos para condução, pressão e abastecimento de água em operações industriais.",
+        "point1": "Bombas para aplicações industriais e comerciais",
+        "point2": "Opções para vazão, pressão e continuidade operacional",
+        "point3": "Suporte na seleção conforme as condições de trabalho"
+      },
+      "motorDrive": {
+        "title": "Potência e movimento",
+        "description": "Motores e componentes para processos que exigem desempenho estável e eficiência.",
+        "point1": "Motores elétricos para diferentes capacidades",
+        "point2": "Foco em eficiência e durabilidade",
+        "point3": "Alternativas para manutenção e reposição"
+      },
+      "electricalIntegration": {
+        "title": "Controle elétrico",
+        "description": "Painéis e soluções de controle para proteger, acionar e organizar sistemas industriais.",
+        "point1": "Painéis de força, comando e proteção",
+        "point2": "Configuração conforme aplicação e carga",
+        "point3": "Componentes para operação segura"
+      },
+      "technicalSupply": {
+        "title": "Suprimento técnico",
+        "description": "Acessórios, conexões e equipamentos relacionados para completar instalações industriais.",
+        "point1": "Componentes compatíveis com sistemas existentes",
+        "point2": "Abastecimento para obra, manutenção e operação",
+        "point3": "Atendimento especializado para compras B2B"
+      }
+    },
+    "serviceSupport": {
+      "quality": "Qualidade",
+      "technicalSupport": "Suporte técnico",
+      "reliableSolutions": "Soluções confiáveis",
+      "specializedAttention": "Atendimento especializado"
+    },
+    "whyChooseUs": {
+      "quality": {
+        "title": "Qualidade",
+        "description": "Suprimentos selecionados para responder às condições industriais e projetos de alta exigência."
+      },
+      "technicalSupport": {
+        "title": "Suporte técnico",
+        "description": "Orientação para escolher equipamentos compatíveis com vazão, potência, carga e ambiente de operação."
+      },
+      "reliableSolutions": {
+        "title": "Soluções confiáveis",
+        "description": "Propostas práticas para continuidade operacional, manutenção e novas instalações."
+      },
+      "specializedAttention": {
+        "title": "Atendimento especializado",
+        "description": "Comunicação direta para contratantes, engenheiros, compras e empresas industriais."
+      }
+    },
+    "services": {
+      "cta": "Cotar",
+      "pumps": {
+        "title": "Bombas",
+        "description": "Bombas d'água para aplicações industriais, comerciais e sistemas de pressão."
+      },
+      "motors": {
+        "title": "Motores",
+        "description": "Motores elétricos e soluções de potência para equipamentos e processos industriais."
+      },
+      "panels": {
+        "title": "Painéis",
+        "description": "Painéis elétricos de controle, proteção e comando para instalações industriais."
+      },
+      "accessories": {
+        "title": "Acessórios",
+        "description": "Acessórios, conexões e componentes complementares para sistemas industriais."
+      }
+    },
+    "testimonials": {
+      "contractor": {
+        "name": "Contratante industrial",
+        "text": "O atendimento técnico nos ajudou a definir bombas e acessórios adequados para a obra sem perder tempo com especificações incompletas."
+      },
+      "engineering": {
+        "name": "Equipe de engenharia",
+        "text": "Valorizamos ter alternativas claras para motores, painéis e componentes compatíveis com nossas instalações."
+      },
+      "maintenance": {
+        "name": "Gerência de manutenção",
+        "text": "A SUINTEC nos permite resolver requisitos de reposição e operação com uma comunicação direta e confiável."
+      }
+    }
+  }
+}

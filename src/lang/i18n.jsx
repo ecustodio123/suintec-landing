@@ -2,6 +2,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import en from "./en.json";
 import es from "./es.json";
+import pt from "./pt.json";
 
 const STORAGE_KEY = "site_language";
 const DEFAULT_LANGUAGE = "es";
@@ -9,6 +10,7 @@ const DEFAULT_LANGUAGE = "es";
 const dictionaries = {
   en,
   es,
+  pt,
 };
 
 const I18nContext = createContext(null);
