@@ -134,7 +134,8 @@
   /* back cover */
   .back{ background:var(--bg-dark); color:#fff; height:100%; position:relative; }
   .back__in{ padding:22mm 16mm; display:flex; flex-direction:column; height:100%; }
-  .back__logo{ height:12mm; width:auto; filter:brightness(0) invert(1); margin-bottom:auto; }
+  .back__logobox{ display:inline-flex; align-self:flex-start; background:rgba(255,255,255,.9); border-radius:9px; padding:3.5mm 5mm; margin-bottom:auto; }
+  .back__logobox img{ height:12mm; width:auto; display:block; }
   .back h2{ font-size:30pt; font-weight:800; max-width:150mm; }
   .back h2 .accent{ color:var(--green-bright); }
   .back__lead{ font-size:11.5pt; color:#cfd6d2; margin:5mm 0 9mm; max-width:140mm; }
@@ -369,7 +370,7 @@
 <section class="page">
   <div class="back">
     <div class="back__in">
-      <img class="back__logo" src="../src/assets/img/logo-suintec.png" alt="SUINTEC" />
+      <div class="back__logobox"><img src="../src/assets/img/logo-suintec.png" alt="SUINTEC" /></div>
       <h2>¿Necesitas una <span class="accent">cotización</span> para tu proyecto?</h2>
       <p class="back__lead">Cuéntanos qué equipo o sistema necesitas y nuestro equipo comercial te ayudará a definir la mejor alternativa.</p>
       <div class="contact">
