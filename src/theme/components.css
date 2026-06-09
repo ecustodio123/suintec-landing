@@ -269,11 +269,13 @@ header.scrolled .logo-img { height: 40px; }
 .marquee {
   overflow: hidden;
   margin-top: 24px;
+  cursor: grab;
+  touch-action: pan-y;
   -webkit-mask: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
   mask: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
 }
-.marquee-track { display: flex; gap: 24px; width: max-content; animation: scroll 32s linear infinite; }
-.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee.dragging { cursor: grabbing; }
+.marquee-track { display: flex; gap: 24px; width: max-content; user-select: none; }
 .logo-chip {
   flex: 0 0 auto;
   height: 86px;
@@ -286,16 +288,15 @@ header.scrolled .logo-img { height: 40px; }
   justify-content: center;
   padding: 16px 26px;
   box-shadow: 0 4px 14px rgba(12, 24, 18, 0.05);
-  transition: 0.25s;
 }
-.logo-chip:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
-.logo-chip img { max-width: 100%; max-height: 48px; object-fit: contain; display: block; }
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
+.logo-chip img {
+  max-width: 100%;
+  max-height: 48px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 /* ---------- Tableros / Accesorios ---------- */

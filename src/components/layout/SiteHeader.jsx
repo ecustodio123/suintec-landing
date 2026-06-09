@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/img/logo-suintec.png";
 import { useI18n } from "../../lang/i18n";
 
@@ -13,6 +13,8 @@ const NAV = [
 
 function SiteHeader() {
   const { t } = useI18n();
+  const { pathname } = useLocation();
+  const onHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeId, setActiveId] = useState("inicio");
@@ -25,6 +27,10 @@ function SiteHeader() {
   }, []);
 
   useEffect(() => {
+    if (!onHome) {
+      setActiveId("inicio");
+      return undefined;
+    }
     const sections = NAV.map((item) => document.getElementById(item.id)).filter(Boolean);
     if (!sections.length) {
       return undefined;
@@ -41,7 +47,7 @@ function SiteHeader() {
     );
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
-  }, []);
+  }, [onHome]);
 
   return (
     <header className={scrolled ? "scrolled" : ""}>
@@ -61,13 +67,19 @@ function SiteHeader() {
         <ul className={`nav-links ${open ? "open" : ""}`.trim()}>
           {NAV.map((item) => (
             <li key={item.key}>
-              <a
-                href={item.href}
-                className={activeId === item.id ? "active" : ""}
-                onClick={() => setOpen(false)}
-              >
-                {t(`navigation.${item.key}`)}
-              </a>
+              {onHome ? (
+                <a
+                  href={item.href}
+                  className={activeId === item.id ? "active" : ""}
+                  onClick={() => setOpen(false)}
+                >
+                  {t(`navigation.${item.key}`)}
+                </a>
+              ) : (
+                <Link to={`/${item.href}`} onClick={() => setOpen(false)}>
+                  {t(`navigation.${item.key}`)}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
