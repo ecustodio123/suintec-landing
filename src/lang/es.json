@@ -120,6 +120,96 @@
     "brands": "Marcas aliadas",
     "equipment": "Equipos suministrados"
   },
+  "trustBar": {
+    "brands": "Marcas líderes",
+    "advice": "Asesoría técnica",
+    "quote": "Cotización directa",
+    "warranty": "Garantía de equipos"
+  },
+  "process": {
+    "title": "Cómo trabajamos",
+    "description": "Un proceso claro de principio a fin para que recibas la solución correcta.",
+    "steps": {
+      "step1": {
+        "title": "Consulta",
+        "description": "Nos cuentas tu requerimiento: caudal, presión y condiciones de operación."
+      },
+      "step2": {
+        "title": "Selección técnica",
+        "description": "Definimos el equipo correcto según tu aplicación y entorno de trabajo."
+      },
+      "step3": {
+        "title": "Suministro",
+        "description": "Entregamos el equipo con respaldo de marcas líderes y garantía."
+      },
+      "step4": {
+        "title": "Postventa",
+        "description": "Acompañamiento, repuestos y soporte técnico continuo."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "description": "Empresas e ingenieros que confían en SUINTEC para sus operaciones.",
+    "items": {
+      "agro": {
+        "company": "Agrícola Yaype",
+        "text": "El equipo de SUINTEC nos ayudó a seleccionar las bombas adecuadas para nuestros pozos y sistema de riego, con asesoría técnica clara y entrega a tiempo."
+      },
+      "construction": {
+        "company": "Constructora Pacífico Sur",
+        "text": "Resolvimos los sistemas de presión e hidroneumáticos y las bombas contra incendio de nuestras obras con equipos confiables y un soporte que cumplió la norma y los plazos."
+      },
+      "industrial": {
+        "company": "Eymaq Perú",
+        "text": "Valoramos de SUINTEC la disponibilidad de equipos y la rapidez de sus cotizaciones; su respaldo técnico nos permite cumplir con nuestros propios compromisos sin contratiempos."
+      }
+    }
+  },
+  "coverage": {
+    "title": "Cobertura",
+    "description": "Atendemos proyectos en Lima y coordinamos despacho a nivel nacional.",
+    "items": {
+      "advice": {
+        "title": "Asesoría presencial y remota",
+        "description": "Te acompañamos en la selección del equipo, estés donde estés."
+      },
+      "delivery": {
+        "title": "Coordinación de entrega a obra",
+        "description": "Gestionamos el despacho de tus equipos hasta el punto que necesites."
+      },
+      "b2b": {
+        "title": "Atención comercial B2B",
+        "description": "Trato directo con contratistas, ingenieros y áreas de compras."
+      }
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "description": "Resolvemos las dudas más comunes antes de tu cotización.",
+    "items": {
+      "q1": {
+        "question": "¿Realizan entregas fuera de Lima?",
+        "answer": "Sí. Atendemos Lima y coordinamos el despacho a provincias según el equipo y el proyecto."
+      },
+      "q2": {
+        "question": "¿Emiten factura?",
+        "answer": "Sí, somos una empresa formal y emitimos comprobantes electrónicos para todas nuestras ventas."
+      },
+      "q3": {
+        "question": "¿Me ayudan a elegir el equipo correcto?",
+        "answer": "Por supuesto. Dimensionamos el equipo según caudal, presión, carga y la aplicación de tu proyecto."
+      },
+      "q4": {
+        "question": "¿Los equipos tienen garantía?",
+        "answer": "Sí. Trabajamos con marcas líderes que cuentan con garantía de fábrica y respaldo técnico."
+      },
+      "q5": {
+        "question": "¿Cómo solicito una cotización?",
+        "answer": "Escríbenos por WhatsApp, completa el formulario de contacto o envíanos un correo a ventas@suintecperu.com; te respondemos a la brevedad."
+      }
+    }
+  },
   "applications": {
     "title": "Aplicaciones",
     "description": "Acompañamos a distintos sectores con soluciones de bombeo y equipamiento adaptadas a las exigencias de cada operación.",
@@ -147,6 +237,8 @@
     "description": "Integramos suministro técnico y criterio de aplicación para que cada componente responda al entorno de trabajo. Trabajamos con empresas que necesitan continuidad operativa, eficiencia y soporte en la elección de equipos.",
     "brandsLabel": "Marcas con las que trabajamos",
     "componentsBrandsLabel": "Marcas de componentes",
+    "quoteCta": "Cotizar",
+    "quoteMessagePrefix": "Hola, quiero cotizar:",
     "pumps": {
       "title": "Bombas",
       "description": "Selección de bombas para extracción, presión constante, trasvase y manejo de aguas residuales, según el requerimiento de cada proyecto.",
@@ -275,6 +367,8 @@
     "title": "SUINTEC",
     "navTitle": "Navegación",
     "commitmentTitle": "Compromiso",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
     "description": "Suministros industriales tecnológicos para sistemas de bombeo, potencia, control eléctrico y accesorios.",
     "highlights": {
       "cloneBuild": "Calidad garantizada",
@@ -335,7 +429,7 @@
       },
       "specializedAttention": {
         "title": "Atención especializada",
-        "description": "Comunicación directa para contratistas, ingenieros, compras y empresas industriales."
+        "description": "Comunicación directa con contratistas, ingenieros, compras y empresas industriales."
       }
     },
     "services": {

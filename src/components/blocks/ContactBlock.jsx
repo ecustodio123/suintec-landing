@@ -61,6 +61,7 @@ function ContactBlock() {
           <form className="form reveal" onSubmit={handleSubmit}>
             <input type="hidden" name="_subject" value="Nueva solicitud desde sitio web SUINTEC" />
             <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ display: "none" }} />
             <input type="text" name="nombre" placeholder={t("contactBlock.fields.fullName")} required />
             <input type="tel" name="telefono" placeholder={t("contactBlock.fields.phone")} required />
             <input className="full" type="email" name="email" placeholder={t("contactBlock.fields.email")} required />

@@ -1,30 +1,71 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo-suintec.png";
 import { useI18n } from "../../lang/i18n";
 
 const NAV = [
-  { key: "home", href: "#inicio" },
-  { key: "about", href: "#nosotros" },
-  { key: "aplicaciones", href: "#aplicaciones" },
-  { key: "soluciones", href: "#soluciones" },
-  { key: "contact", href: "#contacto" },
+  { key: "home", href: "#inicio", id: "inicio" },
+  { key: "about", href: "#nosotros", id: "nosotros" },
+  { key: "aplicaciones", href: "#aplicaciones", id: "aplicaciones" },
+  { key: "soluciones", href: "#soluciones", id: "soluciones" },
+  { key: "contact", href: "#contacto", id: "contacto" },
 ];
 
 function SiteHeader() {
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeId, setActiveId] = useState("inicio");
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = NAV.map((item) => document.getElementById(item.id)).filter(Boolean);
+    if (!sections.length) {
+      return undefined;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <header>
+    <header className={scrolled ? "scrolled" : ""}>
       <div className="wrap nav">
-        <a href="#inicio" className="logo" aria-label={t("header.homeAria")}>
+        <Link
+          to="/"
+          className="logo"
+          aria-label={t("header.homeAria")}
+          onClick={() => {
+            setOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           <img src={logo} alt="SUINTEC" className="logo-img" />
-        </a>
+        </Link>
 
         <ul className={`nav-links ${open ? "open" : ""}`.trim()}>
-          {NAV.map((item, index) => (
+          {NAV.map((item) => (
             <li key={item.key}>
-              <a href={item.href} className={index === 0 ? "active" : ""} onClick={() => setOpen(false)}>
+              <a
+                href={item.href}
+                className={activeId === item.id ? "active" : ""}
+                onClick={() => setOpen(false)}
+              >
                 {t(`navigation.${item.key}`)}
               </a>
             </li>

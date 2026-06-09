@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/img/logo-suintec.png";
 import { useI18n } from "../../lang/i18n";
 
@@ -10,7 +11,7 @@ const NAV = [
 ];
 
 function SiteFooter() {
-  const { t, language } = useI18n();
+  const { t } = useI18n();
 
   return (
     <footer>
@@ -49,8 +50,10 @@ function SiteFooter() {
         </div>
         <div className="foot-bottom">
           <span>{t("footer.rights")}</span>
-          <span className="lang">
-            {t("language.switchLabel")} · {t(`language.${language}`)}
+          <span className="foot-legal">
+            <NavLink to="/privacidad">{t("footer.privacy")}</NavLink>
+            <span aria-hidden="true">·</span>
+            <NavLink to="/terminos">{t("footer.terms")}</NavLink>
           </span>
         </div>
       </div>

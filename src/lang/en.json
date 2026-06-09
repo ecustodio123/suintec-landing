@@ -70,8 +70,8 @@
       "listAria": "SUINTEC strengths",
       "point1": "Equipment selection based on technical project requirements",
       "point2": "Supply for construction, maintenance, and continuous operation",
-      "point3": "Specialized commercial attention for industrial clients",
-      "cta": "Request guidance",
+      "point3": "Specialized commercial support for industrial clients",
+      "cta": "Request a consultation",
       "imageAlt": "Industrial equipment and technical staff in a plant"
     },
     "servicesBlock": {
@@ -93,7 +93,7 @@
     "ctaStrip": {
       "kicker": "Contact",
       "title": "Need a quote for your project?",
-      "description": "Tell us which equipment or system you need and our commercial team will help define the best alternative.",
+      "description": "Tell us which equipment or system you need and our sales team will help you define the best option.",
       "primaryCta": "Quote via WhatsApp",
       "secondaryCta": "Call now"
     },
@@ -120,13 +120,103 @@
     "brands": "Partner brands",
     "equipment": "Equipment supplied"
   },
+  "trustBar": {
+    "brands": "Leading brands",
+    "advice": "Technical advice",
+    "quote": "Direct quoting",
+    "warranty": "Equipment warranty"
+  },
+  "process": {
+    "title": "How we work",
+    "description": "A clear end-to-end process so you get the right solution.",
+    "steps": {
+      "step1": {
+        "title": "Consultation",
+        "description": "Tell us your requirement: flow, pressure, and operating conditions."
+      },
+      "step2": {
+        "title": "Technical selection",
+        "description": "We define the right equipment for your application and working environment."
+      },
+      "step3": {
+        "title": "Supply",
+        "description": "We deliver the equipment backed by leading brands and warranty."
+      },
+      "step4": {
+        "title": "After-sales",
+        "description": "Follow-up, spare parts, and ongoing technical support."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "description": "Companies and engineers that trust SUINTEC for their operations.",
+    "items": {
+      "agro": {
+        "company": "Agrícola Yaype",
+        "text": "SUINTEC's team helped us select the right pumps for our wells and irrigation system, with clear technical advice and on-time delivery."
+      },
+      "construction": {
+        "company": "Constructora Pacífico Sur",
+        "text": "We solved the pressure and hydropneumatic systems and the fire-fighting pumps for our projects with reliable equipment and support that met both the standard and the deadlines."
+      },
+      "industrial": {
+        "company": "Eymaq Perú",
+        "text": "We value SUINTEC's equipment availability and the speed of their quotes; their technical backing lets us meet our own commitments without setbacks."
+      }
+    }
+  },
+  "coverage": {
+    "title": "Coverage",
+    "description": "We serve projects in Lima and coordinate nationwide delivery.",
+    "items": {
+      "advice": {
+        "title": "On-site and remote advice",
+        "description": "We support you in selecting the equipment, wherever you are."
+      },
+      "delivery": {
+        "title": "Delivery coordination to site",
+        "description": "We manage the dispatch of your equipment to wherever you need it."
+      },
+      "b2b": {
+        "title": "B2B commercial service",
+        "description": "Direct dealing with contractors, engineers, and purchasing teams."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "description": "We answer the most common questions before your quote.",
+    "items": {
+      "q1": {
+        "question": "Do you deliver outside Lima?",
+        "answer": "Yes. We serve Lima and coordinate shipping to other regions depending on the equipment and project."
+      },
+      "q2": {
+        "question": "Do you issue invoices?",
+        "answer": "Yes, we are a registered company and issue electronic invoices for all our sales."
+      },
+      "q3": {
+        "question": "Do you help me choose the right equipment?",
+        "answer": "Absolutely. We size the equipment based on flow, pressure, load, and your project's application."
+      },
+      "q4": {
+        "question": "Do the products come with a warranty?",
+        "answer": "Yes. We work with leading brands that include a manufacturer warranty and technical support."
+      },
+      "q5": {
+        "question": "How do I request a quote?",
+        "answer": "Message us on WhatsApp, fill out the contact form, or email us at ventas@suintecperu.com; we'll get back to you shortly."
+      }
+    }
+  },
   "applications": {
     "title": "Applications",
     "description": "We support different sectors with pumping and equipment solutions adapted to the demands of each operation.",
     "items": {
       "agriculture": {
         "title": "Agriculture",
-        "description": "Comprehensive solutions for the agro-industrial sector: fertigation and fertilizer dosing, water transfer and extraction from deep wells, reservoir cleaning, and chemical dosing pumps, with a focus on efficiency and durability."
+        "description": "Comprehensive solutions for the agro-industrial sector: fertigation and fertilizer dosing, water transfer and extraction from deep wells, reservoir cleaning, and chemical dosing pumps, focused on efficiency and durability."
       },
       "construction": {
         "title": "Construction",
@@ -134,7 +224,7 @@
       },
       "industry": {
         "title": "Industry",
-        "description": "Robust solutions for production and manufacturing processes, fluid handling in chemical and petrochemical industries, and applications for food, beverage, and pharmaceutical, with precise flows and operational safety."
+        "description": "Robust solutions for production and manufacturing processes, fluid handling in the chemical and petrochemical industries, and applications for the food, beverage, and pharmaceutical sectors, with precise flow control and operational safety."
       },
       "sanitation": {
         "title": "Sanitation",
@@ -147,6 +237,8 @@
     "description": "We combine technical supply and application criteria so each component fits the working environment. We work with companies that need operational continuity, efficiency, and support in equipment selection.",
     "brandsLabel": "Brands we work with",
     "componentsBrandsLabel": "Component brands",
+    "quoteCta": "Get a quote",
+    "quoteMessagePrefix": "Hello, I'd like a quote for:",
     "pumps": {
       "title": "Pumps",
       "description": "A selection of pumps for extraction, constant pressure, transfer, and wastewater handling, according to each project's requirements.",
@@ -161,15 +253,15 @@
         },
         "verticalMultistage": {
           "title": "Vertical multistage",
-          "description": "High pressure in little space; constant pressure, hydropneumatic equipment, and buildings."
+          "description": "High pressure in a compact footprint; constant pressure, hydropneumatic systems, and building water supply."
         },
         "horizontalMultistage": {
           "title": "Horizontal multistage",
-          "description": "Pressurization and transfer under pressure; washing systems and constant pressure in horizontal mounting."
+          "description": "Pressurization and pressure transfer; washing systems and constant pressure in a horizontal configuration."
         },
         "freeShaft": {
-          "title": "Free-shaft pump with baseplate",
-          "description": "The most robust option: free-shaft pump coupled to a motor on a baseplate, for high flows and continuous service in industry, sanitation, and large transfers."
+          "title": "Bare-shaft pump on baseplate",
+          "description": "The most robust option: a bare-shaft pump coupled to a motor on a baseplate, for high flow rates and continuous duty in industry, sanitation, and large-scale transfer."
         },
         "bellSubmersible": {
           "title": "Bell-type submersible",
@@ -183,7 +275,7 @@
       "items": {
         "electric": {
           "title": "Electric motors",
-          "description": "Three-phase and single-phase for machinery and industrial processes; high efficiency (IE2/IE3), in cast iron or aluminum, for continuous service."
+          "description": "Three-phase and single-phase motors for machinery and industrial processes; high efficiency (IE2/IE3), in cast iron or aluminum, for continuous duty."
         },
         "gearmotors": {
           "title": "Gearmotors and reducers",
@@ -219,7 +311,7 @@
   "about": {
     "mission": {
       "title": "Mission",
-      "description": "To fully resolve our clients' equipment needs: helping them choose the right equipment, supplying it with quality, and supporting them with a close after-sales service that brings real value to every project."
+      "description": "To fully resolve our clients' equipment needs: helping them choose the right equipment, supplying it with quality, and backing them with close after-sales service that brings real value to every project."
     },
     "vision": {
       "title": "Vision",
@@ -252,7 +344,7 @@
       "emailsLabel": "Emails"
     },
     "sending": "Sending...",
-    "okShort": "Email sent, we will contact you",
+    "okShort": "Message sent — we'll contact you soon",
     "errorShort": "Sending failed, please try again",
     "submit": "Send request",
     "mapTitle": "SUINTEC location in Ate, Lima"
@@ -275,6 +367,8 @@
     "title": "SUINTEC",
     "navTitle": "Navigation",
     "commitmentTitle": "Commitment",
+    "privacy": "Privacy policy",
+    "terms": "Terms and conditions",
     "description": "Industrial technology supplies for pumping, power, electrical control, and accessories.",
     "highlights": {
       "cloneBuild": "Guaranteed quality",
@@ -327,15 +421,15 @@
       },
       "technicalSupport": {
         "title": "Technical support",
-        "description": "Guidance to choose equipment compatible with flow, power, load, and operation environment."
+        "description": "Guidance to choose equipment matched to flow, power, load, and operating environment."
       },
       "reliableSolutions": {
         "title": "Reliable solutions",
         "description": "Practical proposals for operational continuity, maintenance, and new installations."
       },
       "specializedAttention": {
-        "title": "Specialized attention",
-        "description": "Direct communication for contractors, engineers, purchasing teams, and industrial companies."
+        "title": "Dedicated support",
+        "description": "Direct communication with contractors, engineers, purchasing teams, and industrial companies."
       }
     },
     "services": {
