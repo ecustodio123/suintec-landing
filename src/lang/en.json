@@ -87,7 +87,7 @@
       "allServicesCta": "View all solutions"
     },
     "whyChooseUs": {
-      "title": "Why choose us",
+      "title": "Technical support for your operation",
       "description": "We combine product quality, technical support, and service oriented to real industrial projects."
     },
     "ctaStrip": {
@@ -142,6 +142,80 @@
       }
     }
   },
+  "solutions": {
+    "title": "Solutions for industrial systems",
+    "description": "We combine technical supply and application criteria so each component fits the working environment. We work with companies that need operational continuity, efficiency, and support in equipment selection.",
+    "brandsLabel": "Brands we work with",
+    "componentsBrandsLabel": "Component brands",
+    "pumps": {
+      "title": "Pumps",
+      "description": "A selection of pumps for extraction, constant pressure, transfer, and wastewater handling, according to each project's requirements.",
+      "items": {
+        "monobloque": {
+          "title": "Monobloc",
+          "description": "Monobloc centrifugal pump in cast iron or stainless steel; high flow for clean or slightly aggressive water; transfer, irrigation, fire-fighting, and processes."
+        },
+        "deepWell": {
+          "title": "Deep-well submersible",
+          "description": "Water extraction from deep wells and boreholes. Includes stainless steel submersible pumps and motors for irrigation and supply from groundwater."
+        },
+        "verticalMultistage": {
+          "title": "Vertical multistage",
+          "description": "High pressure in little space; constant pressure, hydropneumatic equipment, and buildings."
+        },
+        "horizontalMultistage": {
+          "title": "Horizontal multistage",
+          "description": "Pressurization and transfer under pressure; washing systems and constant pressure in horizontal mounting."
+        },
+        "freeShaft": {
+          "title": "Free-shaft pump with baseplate",
+          "description": "The most robust option: free-shaft pump coupled to a motor on a baseplate, for high flows and continuous service in industry, sanitation, and large transfers."
+        },
+        "bellSubmersible": {
+          "title": "Bell-type submersible",
+          "description": "For wastewater and sludge with suspended solids, in cast iron or stainless steel; anti-clogging design for municipal and industrial sanitation."
+        }
+      }
+    },
+    "motors": {
+      "title": "Motors and blowers",
+      "description": "Electric motors, power transmission, and air blowing to drive and move your industrial processes.",
+      "items": {
+        "electric": {
+          "title": "Electric motors",
+          "description": "Three-phase and single-phase for machinery and industrial processes; high efficiency (IE2/IE3), in cast iron or aluminum, for continuous service."
+        },
+        "gearmotors": {
+          "title": "Gearmotors and reducers",
+          "description": "Motor + reducer sets, and standalone reducers, to reduce speed and multiply torque in conveyor belts, mixers, and process machinery."
+        },
+        "blowers": {
+          "title": "Blowers",
+          "description": "Air injection for wastewater aeration, pneumatic transport, drying, and material mixing."
+        }
+      }
+    },
+    "panels": {
+      "title": "Electrical panels",
+      "description": "Power, control, and distribution panels designed to keep your operation protected and running without interruptions. We size each panel with technical criteria, build it with leading-brand components, and test it in the workshop, ensuring safety, operational continuity, and energy efficiency.",
+      "points": {
+        "point1": "Power, control, distribution, transfer, and motor-starting panels.",
+        "point2": "Leading-brand components for protection, switching, control, and metering.",
+        "point3": "Technical sizing and workshop testing for maximum safety and continuity."
+      }
+    },
+    "accessories": {
+      "title": "Industrial accessories",
+      "description": "We complete every system with the accessories needed for a full, functional installation. We supply components for pumping lines, hydraulic networks, automation, and process control.",
+      "points": {
+        "point1": "Pipes, fittings, and accessories in PVC, iron, and stainless steel.",
+        "point2": "Gate, check, butterfly, and regulating valves.",
+        "point3": "Level, pressure, flow, and temperature sensors.",
+        "point4": "Instrumentation and measuring devices for process monitoring.",
+        "point5": "Electrical cables, trays, cable glands, and panel accessories."
+      }
+    }
+  },
   "about": {
     "mission": {
       "title": "Mission",
@@ -153,7 +227,7 @@
     }
   },
   "contactBlock": {
-    "title": "Contact",
+    "title": "Contact us",
     "description": "Request a quote or technical advice for pumps, motors, panels, and industrial accessories.",
     "infoTitle": "Contact details",
     "whatsappLabel": "WhatsApp",
@@ -165,16 +239,21 @@
       "message": "Tell us about your requirement"
     },
     "options": {
-      "option1": "Water pumps",
-      "option2": "Industrial motors",
-      "option3": "Panels and accessories"
+      "option1": "Pumps",
+      "option2": "Motors",
+      "option3": "Electrical panels",
+      "option4": "Accessories",
+      "option5": "Other / Various"
+    },
+    "info": {
+      "addressLabel": "Address",
+      "scheduleLabel": "Hours",
+      "scheduleValue": "Monday to Saturday, 8:00 am – 6:00 pm",
+      "emailsLabel": "Emails"
     },
     "sending": "Sending...",
-    "feedback": {
-      "success": "Message sent successfully. We will contact you soon.",
-      "error": "We could not send the message. Please try again in a few minutes.",
-      "configError": "EmailJS environment variables are missing."
-    },
+    "okShort": "Email sent, we will contact you",
+    "errorShort": "Sending failed, please try again",
     "submit": "Send request",
     "mapTitle": "SUINTEC location in Ate, Lima"
   },
@@ -194,6 +273,8 @@
   },
   "footer": {
     "title": "SUINTEC",
+    "navTitle": "Navigation",
+    "commitmentTitle": "Commitment",
     "description": "Industrial technology supplies for pumping, power, electrical control, and accessories.",
     "highlights": {
       "cloneBuild": "Guaranteed quality",

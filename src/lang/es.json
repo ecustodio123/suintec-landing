@@ -87,7 +87,7 @@
       "allServicesCta": "Ver todas las soluciones"
     },
     "whyChooseUs": {
-      "title": "Por que elegirnos",
+      "title": "Respaldo técnico para tu operación",
       "description": "Combinamos calidad de producto, soporte técnico y una atención orientada a proyectos industriales reales."
     },
     "ctaStrip": {
@@ -142,6 +142,80 @@
       }
     }
   },
+  "solutions": {
+    "title": "Soluciones para sistemas industriales",
+    "description": "Integramos suministro técnico y criterio de aplicación para que cada componente responda al entorno de trabajo. Trabajamos con empresas que necesitan continuidad operativa, eficiencia y soporte en la elección de equipos.",
+    "brandsLabel": "Marcas con las que trabajamos",
+    "componentsBrandsLabel": "Marcas de componentes",
+    "pumps": {
+      "title": "Bombas",
+      "description": "Selección de bombas para extracción, presión constante, trasvase y manejo de aguas residuales, según el requerimiento de cada proyecto.",
+      "items": {
+        "monobloque": {
+          "title": "Monobloque",
+          "description": "Centrífuga monobloque en hierro fundido o acero inoxidable; alto caudal para agua limpia o ligeramente agresiva; trasvase, riego, contra incendio y procesos."
+        },
+        "deepWell": {
+          "title": "Sumergible de pozo profundo",
+          "description": "Extracción de agua en pozos y perforaciones profundas. Incluye bombas y motores sumergibles en acero inoxidable, para riego y abastecimiento desde napa subterránea."
+        },
+        "verticalMultistage": {
+          "title": "Vertical multietapa",
+          "description": "Alta presión en poco espacio; presión constante, equipos hidroneumáticos y edificios."
+        },
+        "horizontalMultistage": {
+          "title": "Horizontal multietapa",
+          "description": "Presurización y trasvase a presión; sistemas de lavado y presión constante en montaje horizontal."
+        },
+        "freeShaft": {
+          "title": "Bomba de eje libre con placa base",
+          "description": "La opción más robusta: bomba de eje libre acoplada a motor sobre placa base, para altos caudales y servicio continuo en industria, saneamiento y grandes trasvases."
+        },
+        "bellSubmersible": {
+          "title": "Sumergible tipo campana",
+          "description": "Para aguas residuales y lodos con sólidos en suspensión, en hierro fundido o acero inoxidable; diseño antiobstrucción para saneamiento municipal e industrial."
+        }
+      }
+    },
+    "motors": {
+      "title": "Motores y sopladores",
+      "description": "Motores eléctricos, transmisión de potencia y soplado de aire para accionar y dar movimiento a tus procesos industriales.",
+      "items": {
+        "electric": {
+          "title": "Motores eléctricos",
+          "description": "Trifásicos y monofásicos para maquinaria y procesos industriales; alta eficiencia (IE2/IE3), en hierro fundido o aluminio, para servicio continuo."
+        },
+        "gearmotors": {
+          "title": "Motorreductores y reductores",
+          "description": "Conjunto motor + reductor, y reductores por separado, para reducir velocidad y multiplicar torque en fajas transportadoras, mezcladoras y maquinaria de proceso."
+        },
+        "blowers": {
+          "title": "Sopladores (blowers)",
+          "description": "Inyección de aire para aireación de aguas residuales, transporte neumático, secado y mezcla de materiales."
+        }
+      }
+    },
+    "panels": {
+      "title": "Tableros eléctricos",
+      "description": "Tableros eléctricos de fuerza, control y distribución diseñados para mantener tu operación protegida y funcionando sin interrupciones. Dimensionamos cada tablero con criterio técnico, lo construimos con componentes de marcas líderes y lo probamos en taller, asegurando seguridad, continuidad operativa y eficiencia energética.",
+      "points": {
+        "point1": "Tableros de fuerza, control, distribución, transferencia y arranque de motores.",
+        "point2": "Componentes de marcas líderes en protección, maniobra, control y medición.",
+        "point3": "Dimensionamiento técnico y pruebas en taller para máxima seguridad y continuidad."
+      }
+    },
+    "accessories": {
+      "title": "Accesorios industriales",
+      "description": "Complementamos cada sistema con los accesorios necesarios para una instalación completa y funcional. Suministramos componentes para líneas de bombeo, redes hidráulicas, automatización y control de procesos.",
+      "points": {
+        "point1": "Tuberías, conexiones y accesorios de PVC, hierro y acero inoxidable.",
+        "point2": "Válvulas de compuerta, check, mariposa y regulación.",
+        "point3": "Sensores de nivel, presión, caudal y temperatura.",
+        "point4": "Instrumentación y dispositivos de medición para monitoreo de procesos.",
+        "point5": "Cables eléctricos, bandejas, prensaestopas y accesorios de tablero."
+      }
+    }
+  },
   "about": {
     "mission": {
       "title": "Misión",
@@ -153,7 +227,7 @@
     }
   },
   "contactBlock": {
-    "title": "Contacto",
+    "title": "Contáctanos",
     "description": "Solicita una cotización o asesoría técnica para bombas, motores, tableros y accesorios industriales.",
     "infoTitle": "Datos de contacto",
     "whatsappLabel": "WhatsApp",
@@ -165,16 +239,21 @@
       "message": "Cuéntanos sobre tu requerimiento"
     },
     "options": {
-      "option1": "Bombas de agua",
-      "option2": "Motores industriales",
-      "option3": "Tableros y accesorios"
+      "option1": "Bombas",
+      "option2": "Motores",
+      "option3": "Tableros eléctricos",
+      "option4": "Accesorios",
+      "option5": "Otro / Varios"
+    },
+    "info": {
+      "addressLabel": "Dirección",
+      "scheduleLabel": "Horario",
+      "scheduleValue": "Lunes a Sábado, 8:00 am – 6:00 pm",
+      "emailsLabel": "Correos"
     },
     "sending": "Enviando...",
-    "feedback": {
-      "success": "Mensaje enviado correctamente. Te contactaremos pronto.",
-      "error": "No se pudo enviar el mensaje. Inténtalo de nuevo en unos minutos.",
-      "configError": "Faltan variables de entorno de EmailJS."
-    },
+    "okShort": "Correo enviado, nos estaremos contactando",
+    "errorShort": "Error al enviar, intenta de nuevo",
     "submit": "Enviar solicitud",
     "mapTitle": "Ubicación de SUINTEC en Ate, Lima"
   },
@@ -194,6 +273,8 @@
   },
   "footer": {
     "title": "SUINTEC",
+    "navTitle": "Navegación",
+    "commitmentTitle": "Compromiso",
     "description": "Suministros industriales tecnológicos para sistemas de bombeo, potencia, control eléctrico y accesorios.",
     "highlights": {
       "cloneBuild": "Calidad garantizada",

@@ -1,19 +1,38 @@
 :root {
-  --color-primary: #2e7d32;
-  --color-primary-700: #1f6b25;
-  --color-primary-800: #14531a;
-  --color-secondary: #111111;
-  --color-accent: #39a844;
+  /* Source-of-truth palette (suintec-site/css/styles.css) */
+  --green: #1f9d55;
+  --green-bright: #27b864;
+  --green-deep: #157a40;
+  --bg-dark: #0c0f0e;
+  --bg-darker: #080a09;
+  --light: #f4f6f4;
+  --light-2: #eef1ee;
+  --white: #ffffff;
+  --text: #171a18;
+  --muted: #6b726e;
+  --muted-dark: #9aa39e;
+  --border: #e4e8e5;
+  --border-dark: #22302a;
+  --radius: 14px;
+  --shadow: 0 8px 30px rgba(12, 24, 18, 0.07);
+  --shadow-lg: 0 20px 50px rgba(12, 24, 18, 0.12);
+  --maxw: 1180px;
 
+  /* Legacy aliases (used by secondary pages/components) */
+  --color-primary: #1f9d55;
+  --color-primary-700: #157a40;
+  --color-primary-800: #157a40;
+  --color-secondary: #171a18;
+  --color-accent: #27b864;
   --color-text-primary: #171a18;
-  --color-text-muted: #5f6b63;
+  --color-text-muted: #6b726e;
   --color-surface: #ffffff;
-  --color-bg-page: #f7f8f7;
-  --color-bg-soft: #eef3ef;
-  --color-border: #d9dfdb;
-  --color-border-soft: #e7ece8;
+  --color-bg-page: #ffffff;
+  --color-bg-soft: #f4f6f4;
+  --color-border: #e4e8e5;
+  --color-border-soft: #e4e8e5;
+  --color-primary-rgb: 31, 157, 85;
 
-  --color-primary-rgb: 46, 125, 50;
   --radius-sm: 0.35rem;
   --radius-md: 0.55rem;
   --radius-lg: 0.75rem;

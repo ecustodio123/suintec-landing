@@ -1,13 +1,19 @@
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { useI18n } from "../../lang/i18n";
 
 function WhatsAppFloatingButton() {
   const { t } = useI18n();
 
   return (
-    <a className="whatsapp-fab" href={t("business.whatsappHref")} target="_blank" rel="noreferrer" aria-label={t("whatsapp.ariaLabel")}>
-      <WhatsAppIcon sx={{ fontSize: 24 }} />
-      <span>{t("whatsapp.label")}</span>
+    <a
+      href={t("business.whatsappHref")}
+      target="_blank"
+      rel="noreferrer"
+      className="wa-float"
+      aria-label={t("whatsapp.ariaLabel")}
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4C7.7 4 4.15 7.54 4.15 11.9c0 1.4.36 2.76 1.06 3.96L4.08 20l4.25-1.11a7.9 7.9 0 0 0 3.71.94h.01c4.35 0 7.9-3.54 7.9-7.9 0-2.11-.82-4.1-2.35-5.61zm-5.55 12.15h-.01a6.56 6.56 0 0 1-3.34-.92l-.24-.14-2.48.65.66-2.42-.16-.25a6.53 6.53 0 0 1-1-3.49c0-3.62 2.95-6.56 6.57-6.56a6.53 6.53 0 0 1 6.56 6.57c0 3.62-2.95 6.56-6.56 6.56zm3.6-4.92c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.51.64-.62.77-.11.13-.23.15-.43.05-.2-.1-.83-.31-1.59-.98-.59-.52-.98-1.17-1.1-1.37-.11-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.12.13-.2.2-.34.07-.13.03-.25-.02-.35-.05-.1-.44-1.07-.6-1.46-.16-.39-.32-.33-.44-.34h-.38c-.13 0-.34.05-.52.25-.18.2-.68.67-.68 1.62 0 .96.7 1.88.79 2.01.1.13 1.37 2.1 3.33 2.94.47.2.83.32 1.11.41.47.15.89.13 1.23.08.38-.06 1.17-.48 1.33-.94.16-.46.16-.86.12-.94-.05-.08-.18-.13-.38-.23z" />
+      </svg>
     </a>
   );
 }

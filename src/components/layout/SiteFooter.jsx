@@ -1,49 +1,59 @@
-import { NavLink } from "react-router-dom";
+import logo from "../../assets/img/logo-suintec.png";
 import { useI18n } from "../../lang/i18n";
-import Container from "../primitives/Container";
-import SocialLinks from "../primitives/SocialLinks";
+
+const NAV = [
+  { key: "home", href: "#inicio" },
+  { key: "about", href: "#nosotros" },
+  { key: "aplicaciones", href: "#aplicaciones" },
+  { key: "soluciones", href: "#soluciones" },
+  { key: "contact", href: "#contacto" },
+];
 
 function SiteFooter() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
 
   return (
-    <footer className="footer">
-      <Container className="footer-grid">
-        <div className="footer-brand">
-          <h3 style={{ marginTop: 0 }}>{t("footer.title")}</h3>
-          <p>{t("footer.description")}</p>
-          <SocialLinks tone="footer" />
+    <footer>
+      <div className="wrap">
+        <div className="foot-grid">
+          <div>
+            <div className="footer-logo">
+              <img src={logo} alt="SUINTEC" className="footer-logo-img" />
+            </div>
+            <p className="blurb">{t("footer.description")}</p>
+          </div>
+          <div>
+            <h5>{t("footer.navTitle")}</h5>
+            <ul>
+              {NAV.map((item) => (
+                <li key={item.key}>
+                  <a href={item.href}>{t(`navigation.${item.key}`)}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h5>{t("footer.commitmentTitle")}</h5>
+            <ul>
+              <li>
+                <a href="#nosotros">{t("footer.highlights.cloneBuild")}</a>
+              </li>
+              <li>
+                <a href="#nosotros">{t("footer.highlights.tokenBased")}</a>
+              </li>
+              <li>
+                <a href="#nosotros">{t("footer.highlights.responsive")}</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul className="footer-links">
-          <li>
-            <NavLink to="/">{t("navigation.home")}</NavLink>
-          </li>
-          <li>
-            <a href="#quienes-somos">{t("navigation.about")}</a>
-          </li>
-          <li>
-            <a href="#bombas">{t("navigation.pumps")}</a>
-          </li>
-          <li>
-            <a href="#motores">{t("navigation.motors")}</a>
-          </li>
-          <li>
-            <a href="#tableros">{t("navigation.panels")}</a>
-          </li>
-          <li>
-            <a href="#accesorios">{t("navigation.accessories")}</a>
-          </li>
-          <li>
-            <a href="#contacto">{t("navigation.contact")}</a>
-          </li>
-        </ul>
-        <ul className="footer-links">
-          <li>{t("footer.highlights.cloneBuild")}</li>
-          <li>{t("footer.highlights.tokenBased")}</li>
-          <li>{t("footer.highlights.responsive")}</li>
-        </ul>
-      </Container>
-      <div className="footer-bottom">{t("footer.rights")}</div>
+        <div className="foot-bottom">
+          <span>{t("footer.rights")}</span>
+          <span className="lang">
+            {t("language.switchLabel")} · {t(`language.${language}`)}
+          </span>
+        </div>
+      </div>
     </footer>
   );
 }

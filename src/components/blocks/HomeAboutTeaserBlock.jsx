@@ -1,36 +1,34 @@
 import { aboutTeaserImage } from "../../data/demoContent";
 import { useI18n } from "../../lang/i18n";
-import Container from "../primitives/Container";
 import MissionVisionBlock from "./MissionVisionBlock";
 
-function HomeAboutTeaserBlock({ ctaTo = "#contacto" }) {
+function HomeAboutTeaserBlock() {
   const { t } = useI18n();
 
   return (
-    <section className="surface-section" id="quienes-somos">
-      <Container>
-        <div className="home-about-teaser">
-          <div>
-            <p className="hero2-kicker">{t("home.aboutTeaser.kicker")}</p>
+    <section className="about" id="nosotros">
+      <div className="wrap">
+        <article className="qs-about reveal">
+          <div className="qs-about-text">
+            <div className="eyebrow">{t("home.aboutTeaser.kicker")}</div>
             <h2>{t("home.aboutTeaser.title")}</h2>
             <p>{t("home.aboutTeaser.description")}</p>
-            <ul className="hero-highlights" aria-label={t("home.aboutTeaser.listAria")}>
+            <ul className="qs-list">
               <li>{t("home.aboutTeaser.point1")}</li>
               <li>{t("home.aboutTeaser.point2")}</li>
               <li>{t("home.aboutTeaser.point3")}</li>
             </ul>
-            <a className="btn btn-primary" href={ctaTo}>
+            <a href="#contacto" className="btn btn-solicitar">
               {t("home.aboutTeaser.cta")}
             </a>
           </div>
-
-          <div className="home-about-teaser__media">
+          <div className="qs-about-img">
             <img src={aboutTeaserImage} alt={t("home.aboutTeaser.imageAlt")} loading="lazy" />
           </div>
-        </div>
+        </article>
 
         <MissionVisionBlock />
-      </Container>
+      </div>
     </section>
   );
 }

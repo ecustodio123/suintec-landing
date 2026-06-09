@@ -1,16 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "../../lang/i18n";
-import Container from "../primitives/Container";
 
 const STATS = [
-  { key: "experience", value: 5 },
-  { key: "brands", value: 15 },
-  { key: "equipment", value: 500 },
+  { key: "experience", value: 5, duration: 1500 },
+  { key: "brands", value: 15, duration: 2000 },
+  { key: "equipment", value: 500, duration: 2500 },
 ];
 
-const DURATION = 2000;
-
-function useCountUp(target, active) {
+function useCountUp(target, duration, active) {
   const [value, setValue] = useState(0);
 
   useEffect(() => {
@@ -20,31 +17,28 @@ function useCountUp(target, active) {
 
     let raf;
     const start = performance.now();
-
     const tick = (now) => {
-      const progress = Math.min((now - start) / DURATION, 1);
+      const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       setValue(Math.round(eased * target));
-
       if (progress < 1) {
         raf = requestAnimationFrame(tick);
       }
     };
-
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [target, active]);
+  }, [target, duration, active]);
 
   return value;
 }
 
-function StatItem({ value, label, active }) {
-  const current = useCountUp(value, active);
+function Stat({ value, duration, label, active }) {
+  const current = useCountUp(value, duration, active);
 
   return (
-    <div className="stat-item">
-      <span className="stat-item__value">{current}+</span>
-      <span className="stat-item__label">{label}</span>
+    <div className="stat reveal">
+      <span className="stat-number">{current}+</span>
+      <span className="stat-label">{label}</span>
     </div>
   );
 }
@@ -59,7 +53,6 @@ function StatsBlock() {
     if (!el) {
       return undefined;
     }
-
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -67,20 +60,21 @@ function StatsBlock() {
           observer.disconnect();
         }
       },
-      { threshold: 0.4 },
+      { threshold: 0.3 },
     );
-
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="stats-band" ref={ref}>
-      <Container className="stats-grid">
-        {STATS.map((stat) => (
-          <StatItem key={stat.key} value={stat.value} active={active} label={t(`stats.${stat.key}`)} />
-        ))}
-      </Container>
+    <section className="stats-section">
+      <div className="wrap">
+        <div className="stats-grid" ref={ref}>
+          {STATS.map((stat) => (
+            <Stat key={stat.key} value={stat.value} duration={stat.duration} active={active} label={t(`stats.${stat.key}`)} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
