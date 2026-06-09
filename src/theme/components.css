@@ -364,6 +364,7 @@ header.scrolled .logo-img { height: 40px; }
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: radial-gradient(ellipse at 70% 20%, rgba(39, 184, 92, 0.15), transparent 60%),
     radial-gradient(ellipse at 20% 80%, rgba(39, 184, 92, 0.08), transparent 50%);
 }
@@ -374,6 +375,7 @@ header.scrolled .logo-img { height: 40px; }
   left: -50%;
   width: 200%;
   height: 200%;
+  pointer-events: none;
   background: conic-gradient(from 0deg, transparent, rgba(39, 184, 92, 0.06), transparent 30%);
   animation: cta-glow 8s linear infinite;
 }
