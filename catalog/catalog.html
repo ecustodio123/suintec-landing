@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --green:#1f9d55; --green-bright:#27b864; --green-deep:#157a40;
+    --bg-dark:#0c0f0e; --light:#f4f6f4; --light2:#eef1ee;
+    --text:#171a18; --muted:#6b726e; --border:#e4e8e5; --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  html,body{font-family:'IBM Plex Sans','Segoe UI',sans-serif;color:var(--text);line-height:1.55;}
+  h1,h2,h3,h4{font-family:'Archivo','Segoe UI',sans-serif;line-height:1.08;letter-spacing:-.02em;}
+  img{display:block;max-width:100%;}
+
+  @page{ size:A4; margin:0; }
+  .page{
+    width:210mm; height:297mm; position:relative; overflow:hidden;
+    page-break-after:always; background:#fff;
+  }
+  .page:last-child{ page-break-after:auto; }
+  .pad{ padding:16mm 15mm; height:100%; }
+
+  .accent{ color:var(--green-bright); }
+  .green{ color:var(--green); }
+
+  /* running header / footer */
+  .rh{ display:flex; align-items:center; justify-content:space-between; margin-bottom:9mm; }
+  .rh img{ height:11mm; width:auto; }
+  .rh span{ font-family:'Archivo'; font-size:9pt; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+  .pn{ position:absolute; bottom:8mm; left:0; right:0; text-align:center; font-size:8.5pt; color:var(--muted); letter-spacing:.04em; }
+
+  .eyebrow{ font-family:'Archivo'; font-weight:700; font-size:9pt; letter-spacing:.16em; text-transform:uppercase; color:var(--green); margin-bottom:3mm; }
+  .sec-title{ font-size:26pt; font-weight:800; color:var(--text); margin-bottom:3mm; }
+  .sec-sub{ font-size:11pt; color:var(--muted); max-width:150mm; }
+
+  /* ---------- Cover ---------- */
+  .cover{ height:100%; background:var(--bg-dark); color:#fff; display:flex; flex-direction:column; }
+  .cover__top{ padding:16mm 16mm 9mm; background:linear-gradient(155deg,#10331b 0%,#0c0f0e 72%); }
+  .cover__logobox{ display:inline-flex; align-items:center; background:rgba(255,255,255,.88); border-radius:9px; padding:3.5mm 5mm; }
+  .cover__logobox img{ height:12mm; width:auto; display:block; }
+  .cover__tag{ display:inline-block; margin-top:7mm; font-family:'Archivo'; font-weight:700; font-size:9pt; letter-spacing:.16em;
+    text-transform:uppercase; color:#fff; background:var(--green); padding:2mm 4mm; border-radius:999px; }
+  .cover__title{ font-size:37pt; font-weight:800; line-height:1.05; margin-top:7mm; max-width:172mm; }
+  .cover__title .accent{ color:var(--green-bright); }
+  .cover__sub{ font-size:12.5pt; color:#cfd6d2; margin-top:5mm; max-width:150mm; }
+  .cover__photo{ flex:1 1 auto; overflow:hidden; }
+  .cover__photo img{ width:100%; height:100%; object-fit:cover; object-position:center; }
+  .cover__bar{ display:flex; align-items:center; justify-content:space-between; gap:6mm; padding:7mm 16mm; background:#0c0f0e; }
+  .cover__bar .txt b{ display:block; font-family:'Archivo'; font-size:13pt; color:var(--green-bright); letter-spacing:.02em; }
+  .cover__bar .txt span{ font-size:9.5pt; color:#aeb6b1; }
+  .qr{ background:#fff; border-radius:7px; padding:2mm; flex:0 0 auto; }
+  .qr img{ width:20mm; height:20mm; display:block; }
+
+  /* product lines (page 2) */
+  .lines-h{ font-family:'Archivo'; font-weight:700; font-size:12pt; margin-bottom:4mm; }
+  .lines{ display:grid; grid-template-columns:repeat(4,1fr); gap:5mm; }
+  .line{ border:1px solid var(--border); border-radius:var(--radius); padding:5mm; background:var(--light); }
+  .line__ic{ width:10mm; height:10mm; border-radius:8px; background:rgba(31,157,85,.12); color:var(--green);
+    display:flex; align-items:center; justify-content:center; margin-bottom:3mm; font-family:'Archivo'; font-weight:800; font-size:11pt; }
+  .line b{ display:block; font-family:'Archivo'; font-size:10pt; margin-bottom:1mm; }
+  .line small{ font-size:8.3pt; color:var(--muted); }
+
+  /* benefits highlight (page 5) */
+  .hl{ display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; margin-top:8mm; }
+  .hl div{ background:rgba(31,157,85,.08); border:1px solid rgba(31,157,85,.25); border-radius:10px;
+    padding:4mm 5mm; font-size:9.3pt; color:var(--green-deep); font-weight:500; display:flex; align-items:center; gap:3mm; }
+  .hl div::before{ content:"✓"; width:5mm; height:5mm; border-radius:50%; background:var(--green); color:#fff;
+    font-size:7pt; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+
+  /* ---------- generic cards ---------- */
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:7mm; }
+  .grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
+  .card{ border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; background:#fff; }
+  .card__media{ height:46mm; width:100%; object-fit:cover; }
+  .card__body{ padding:5mm 5mm; }
+  .card__body h3{ font-size:13pt; margin-bottom:2mm; color:var(--text); }
+  .card__body p{ font-size:9.5pt; color:var(--muted); }
+
+  /* about */
+  .about-hero{ display:grid; grid-template-columns:1.05fr .95fr; gap:7mm; align-items:stretch; margin-bottom:8mm; }
+  .about-hero p{ font-size:11pt; color:var(--muted); }
+  .about-hero img{ width:100%; height:100%; min-height:70mm; object-fit:cover; border-radius:var(--radius); }
+  .mv{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-bottom:8mm; }
+  .mv__card{ border:1px solid var(--border); border-top:3px solid var(--green); border-radius:var(--radius); padding:6mm; }
+  .mv__card h3{ font-size:13pt; margin-bottom:2.5mm; }
+  .mv__card p{ font-size:9.7pt; color:var(--muted); }
+  .stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; }
+  .stat{ background:var(--bg-dark); border-radius:var(--radius); padding:7mm 4mm; text-align:center; }
+  .stat b{ display:block; font-family:'Archivo'; font-weight:800; font-size:26pt; color:var(--green-bright); line-height:1; }
+  .stat span{ font-size:9.5pt; color:#cfd6d2; }
+
+  /* product cards (white media) */
+  .pcard{ border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; }
+  .pcard__media{ height:38mm; display:flex; align-items:center; justify-content:center; background:#fff; border-bottom:1px solid var(--border); padding:4mm; }
+  .pcard__media img{ max-width:100%; max-height:100%; object-fit:contain; }
+  .pcard__b{ padding:4mm 4.5mm; }
+  .pcard__b h4{ font-size:11pt; margin-bottom:1.5mm; }
+  .pcard__b p{ font-size:8.7pt; color:var(--muted); }
+
+  /* brands strip */
+  .brands{ margin-top:auto; }
+  .brands__label{ font-family:'Archivo'; font-weight:700; font-size:8.5pt; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); text-align:center; margin-bottom:4mm; }
+  .brands__row{ display:flex; flex-wrap:wrap; justify-content:center; gap:4mm; }
+  .chip{ height:18mm; width:34mm; border:1px solid var(--border); border-radius:9px; display:flex; align-items:center; justify-content:center; padding:3mm 4mm; }
+  .chip img{ max-width:100%; max-height:10mm; object-fit:contain; }
+
+  /* feature block (tableros/accesorios) */
+  .feature{ display:grid; grid-template-columns:1.05fr .95fr; gap:7mm; align-items:center; }
+  .feature.rev .feature__txt{ order:2; }
+  .feature__txt h3{ font-size:15pt; margin-bottom:2.5mm; }
+  .feature__txt > p{ font-size:9.7pt; color:var(--muted); margin-bottom:4mm; }
+  .feature img{ width:100%; height:62mm; object-fit:cover; border-radius:var(--radius); border:1px solid var(--border); }
+  .checks{ list-style:none; display:flex; flex-direction:column; gap:2.6mm; }
+  .checks li{ position:relative; padding-left:7mm; font-size:9.5pt; color:#39413c; }
+  .checks li::before{ content:"✓"; position:absolute; left:0; top:0; width:5mm; height:5mm; border-radius:50%;
+    background:var(--green); color:#fff; font-size:7pt; font-weight:800; display:flex; align-items:center; justify-content:center; }
+
+  /* why + process */
+  .why{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-bottom:9mm; }
+  .why__c{ border:1px solid var(--border); border-radius:var(--radius); padding:5mm; }
+  .why__ic{ width:11mm; height:11mm; border-radius:50%; background:var(--green); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Archivo'; font-weight:800; margin-bottom:3mm; }
+  .why__c h4{ font-size:11.5pt; margin-bottom:1.5mm; }
+  .why__c p{ font-size:9.3pt; color:var(--muted); }
+  .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:5mm; }
+  .step{ background:var(--light); border:1px solid var(--border); border-radius:var(--radius); padding:5mm; }
+  .step b{ display:flex; width:9mm; height:9mm; border-radius:8px; background:var(--green); color:#fff; font-family:'Archivo'; font-weight:800; align-items:center; justify-content:center; margin-bottom:3mm; }
+  .step h4{ font-size:10.5pt; margin-bottom:1.5mm; }
+  .step p{ font-size:8.7pt; color:var(--muted); }
+
+  /* back cover */
+  .back{ background:var(--bg-dark); color:#fff; height:100%; position:relative; }
+  .back__in{ padding:22mm 16mm; display:flex; flex-direction:column; height:100%; }
+  .back__logo{ height:12mm; width:auto; filter:brightness(0) invert(1); margin-bottom:auto; }
+  .back h2{ font-size:30pt; font-weight:800; max-width:150mm; }
+  .back h2 .accent{ color:var(--green-bright); }
+  .back__lead{ font-size:11.5pt; color:#cfd6d2; margin:5mm 0 9mm; max-width:140mm; }
+  .contact{ display:grid; grid-template-columns:1fr 1fr; gap:4mm 8mm; max-width:155mm; }
+  .contact div{ font-size:10.5pt; color:#e6eae8; }
+  .contact div b{ display:block; font-family:'Archivo'; font-size:8.5pt; letter-spacing:.12em; text-transform:uppercase; color:var(--green-bright); margin-bottom:1mm; }
+  .back__cta{ margin-top:11mm; }
+  .back__cta a{ display:inline-block; background:var(--green); color:#fff; font-family:'Archivo'; font-weight:700; font-size:12pt; padding:4mm 9mm; border-radius:10px; }
+  .back__foot{ margin-top:auto; padding-top:8mm; border-top:1px solid rgba(255,255,255,.16); font-size:9pt; color:#aeb6b1; display:flex; justify-content:space-between; }
+
+  .I{ } /* image base path helper note */
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 — COVER ===================== -->
+<section class="page">
+  <div class="cover">
+    <div class="cover__top">
+      <div class="cover__logobox"><img src="../src/assets/img/logo-suintec.png" alt="SUINTEC" /></div>
+      <br /><span class="cover__tag">Catálogo de productos</span>
+      <h1 class="cover__title">Equipamiento <span class="accent">industrial</span> para tus proyectos más exigentes</h1>
+      <p class="cover__sub">Bombas de agua, motores, tableros eléctricos y accesorios industriales con asesoría técnica y atención directa.</p>
+    </div>
+    <div class="cover__photo">
+      <img src="../src/assets/img/sala-de-bombeo-industrial-con-bomba-centrifuga-m.jpeg" alt="Equipo de bombeo industrial" />
+    </div>
+    <div class="cover__bar">
+      <div class="txt"><b>www.suintecperu.com</b><span>Lima, Perú · WhatsApp +51 955 483 364</span></div>
+      <div class="qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;margin=0&amp;data=https%3A%2F%2Fwww.suintecperu.com" alt="QR suintecperu.com" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PAGE 2 — QUIÉNES SOMOS ===================== -->
+<section class="page">
+  <div class="pad">
+    <div class="rh"><img src="../src/assets/img/logo-suintec.png" alt="SUINTEC" /><span>Catálogo de productos</span></div>
+    <div class="eyebrow">Quiénes somos</div>
+    <h2 class="sec-title">Suministros confiables para operaciones industriales</h2>
+    <div class="about-hero" style="margin-top:6mm;">
+      <div>
+        <p>SUINTEC acompaña a contratistas, ingenieros y empresas con soluciones tecnológicas para sistemas de bombeo, automatización eléctrica y equipamiento industrial.</p>
+        <ul class="checks" style="margin-top:5mm;">
+          <li>Selección de equipos según los requerimientos técnicos del proyecto.</li>
+          <li>Abastecimiento para obras, mantenimiento y operación continua.</li>
+          <li>Atención comercial especializada para clientes industriales.</li>
+        </ul>
+      </div>
+      <img src="../src/assets/img/tecnicos-de-suintec-revisando-una-bomba-y-un-tab.jpeg" alt="Técnicos de SUINTEC" />
+    </div>
+    <div class="mv">
+      <div class="mv__card">
+        <h3>Misión</h3>
+        <p>Resolver de principio a fin las necesidades de equipamiento de nuestros clientes: ayudarles a elegir el equipo correcto, suministrarlo con calidad y acompañarlos con un servicio postventa cercano que aporte valor real a cada proyecto.</p>
+      </div>
+      <div class="mv__card">
+        <h3>Visión</h3>
+        <p>Convertirnos en un referente del suministro industrial en el Perú, reconocidos por la cercanía con nuestros clientes, la innovación en cada propuesta y la capacidad de sostener operaciones eficientes y duraderas.</p>
+      </div>
+    </div>
+    <div class="lines-h">Nuestras líneas de producto</div>
+    <div class="lines">
+      <div class="line"><div class="line__ic">B</div><b>Bombas</b><small>Centrífugas, sumergibles y multietapa.</small></div>
+      <div class="line"><div class="line__ic">M</div><b>Motores y sopladores</b><small>Motores, reductores y blowers.</small></div>
+      <div class="line"><div class="line__ic">T</div><b>Tableros eléctricos</b><small>Fuerza, control y distribución.</small></div>
+      <div class="line"><div class="line__ic">A</div><b>Accesorios</b><small>Tuberías, válvulas y sensores.</small></div>
+    </div>
+  </div>
+  <div class="pn">SUINTEC · Suministros Industriales Tecnológicos — 02</div>
+</section>
+
+<!-- ===================== PAGE 3 — APLICACIONES ===================== -->
+<section class="page">
+  <div class="pad">
+    <div class="rh"><img src="../src/assets/img/logo-suintec.png" alt="SUINTEC" /><span>Catálogo de productos</span></div>
+    <div class="eyebrow">Sectores</div>
+    <h2 class="sec-title">Aplicaciones</h2>
+    <p class="sec-sub">Acompañamos a distintos sectores con soluciones de bombeo y equipamiento adaptadas a las exigencias de cada operación.</p>
+    <div class="grid2" style="margin-top:7mm;">
+      <div class="card">
+        <img class="card__media" src="../src/assets/img/campo-de-cultivo-en-hileras-bajo-cielo-despejado.jpeg" alt="Agricultura" />
+        <div class="card__body"><h3>Agricultura</h3><p>Fertirriego y dosificación de fertilizantes, extracción de agua en pozos profundos, limpieza de reservorios y bombas dosificadoras de químicos.</p></div>
+      </div>
+      <div class="card">
+        <img class="card__media" src="../src/assets/img/obra-de-construccion-de-edificios-con-gruas-torr.jpeg" alt="Construcción" />
+        <div class="card__body"><h3>Construcción</h3><p>Sistemas de presión constante e hidroneumáticos, manejo de aguas residuales y sistemas sépticos, y bombas contra incendios conforme a la norma NFPA.</p></div>
+      </div>
+      <div class="card">
+        <img class="card__media" src="../src/assets/img/planta-industrial-con-silos-y-torres-al-atardece.jpeg" alt="Industria" />
+        <div class="card__body"><h3>Industria</h3><p>Procesos de producción y fabricación, manejo de fluidos en química y petroquímica, y aplicaciones para alimentos, bebidas y farmacéutica.</p></div>
+      </div>
+      <div class="card">
+        <img class="card__media" src="../src/assets/img/planta-de-tratamiento-de-aguas-residuales-vista.jpeg" alt="Saneamiento" />
+        <div class="card__body"><h3>Saneamiento</h3><p>Manejo, traslado y tratamiento de aguas residuales en plantas municipales e industriales, con bombas dosificadoras para tratamiento químico.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="pn">SUINTEC · Suministros Industriales Tecnológicos — 03</div>
+</section>
+
+<!-- ===================== PAGE 4 — BOMBAS ===================== -->
+<section class="page">
+  <div class="pad" style="display:flex; flex-direction:column;">
+    <div class="rh"><img src="../src/assets/img/logo-suintec.png" alt="SUINTEC" /><span>Soluciones · Bombas</span></div>
+    <div class="eyebrow">Soluciones</div>
+    <h2 class="sec-title">Bombas</h2>
+    <p class="sec-sub">Selección de bombas para extracción, presión constante, trasvase y manejo de aguas residuales, según el requerimiento de cada proyecto.</p>
+    <div class="grid3" style="margin-top:6mm;">
+      <div class="pcard"><div class="pcard__media"><img src="../src/assets/img/bombas-centrifugas-monobloque-en-hierro-fundido.jpeg" alt="Monobloque" /></div><div class="pcard__b"><h4>Monobloque</h4><p>Centrífuga en hierro fundido o acero inoxidable; alto caudal para agua limpia o ligeramente agresiva.</p></div></div>
+      <div class="pcard"><div class="pcard__media"><img src="../src/assets/img/bomba-sumergible-de-pozo-profundo-y-motores-sume.jpeg" alt="Sumergible de pozo profundo" /></div><div class="pcard__b"><h4>Sumergible de pozo profundo</h4><p>Extracción de agua en pozos y perforaciones profundas, en acero inoxidable.</p></div></div>
+      <div class="pcard"><div class="pcard__media"><img src="../src/assets/img/familia-de-bombas-verticales-multietapa-en-acero.jpeg" alt="Vertical multietapa" /></div><div class="pcard__b"><h4>Vertical multietapa</h4><p>Alta presión en poco espacio; presión constante, hidroneumáticos y edificios.</p></div></div>
+      <div class="pcard"><div class="pcard__media"><img src="../src/assets/img/bombas-horizontales-multietapa-en-acero-inoxidab.jpeg" alt="Horizontal multietapa" /></div><div class="pcard__b"><h4>Horizontal multietapa</h4><p>Presurización y trasvase a presión; sistemas de lavado en montaje horizontal.</p></div></div>
+      <div class="pcard"><div class="pcard__media"><img src="../src/assets/img/bomba-de-eje-libre-acoplada-a-motor-sobre-placa.jpeg" alt="Bomba de eje libre con placa base" /></div><div class="pcard__b"><h4>Eje libre con placa base</h4><p>La opción más robusta para altos caudales y servicio continuo en industria y saneamiento.</p></div></div>
+      <div class="pcard"><div class="pcard__media"><img src="../src/assets/img/bombas-sumergibles-tipo-campana-en-hierro-fundid.jpeg" alt="Sumergible tipo campana" /></div><div class="pcard__b"><h4>Sumergible tipo campana</h4><p>Para aguas residuales y lodos con sólidos en suspensión; diseño antiobstrucción.</p></div></div>
+    </div>
+    <div class="brands" style="margin-top:9mm;">
+      <div class="brands__label">Marcas con las que trabajamos</div>
+      <div class="brands__row">
+        <div class="chip"><img src="../src/assets/img/pedrollo.png" alt="Pedrollo" /></div>
+        <div class="chip"><img src="../src/assets/img/pentax.png" alt="Pentax" /></div>
+        <div class="chip"><img src="../src/assets/img/espa.png" alt="ESPA" /></div>
+        <div class="chip"><img src="../src/assets/img/barnes.png" alt="Barnes" /></div>
+        <div class="chip"><img src="../src/assets/img/ebara.png" alt="Ebara" /></div>
+        <div class="chip"><img src="../src/assets/img/franklin-electric.png" alt="Franklin Electric" /></div>
+        <div class="chip"><img src="../src/assets/img/panelli.png" alt="Panelli" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="pn">SUINTEC · Suministros Industriales Tecnológicos — 04</div>
+</section>
+
+<!-- ===================== PAGE 5 — MOTORES Y SOPLADORES ===================== -->
+<section class="page">
+  <div class="pad" style="display:flex; flex-direction:column;">
+    <div class="rh"><img src="../src/assets/img/logo-suintec.png" alt="SUINTEC" /><span>Soluciones · Motores</span></div>
+    <div class="eyebrow">Soluciones</div>
+    <h2 class="sec-title">Motores y sopladores</h2>
+    <p class="sec-sub">Motores eléctricos, transmisión de potencia y soplado de aire para accionar y dar movimiento a tus procesos industriales.</p>
+    <div class="grid3" style="margin-top:6mm;">
+      <div class="pcard"><div class="pcard__media"><img src="../src/assets/img/motores-electricos-trifasicos-en-distintas-poten.jpeg" alt="Motores eléctricos" /></div><div class="pcard__b"><h4>Motores eléctricos</h4><p>Trifásicos y monofásicos para maquinaria y procesos; alta eficiencia (IE2/IE3), en hierro fundido o aluminio.</p></div></div>
+      <div class="pcard"><div class="pcard__media"><img src="../src/assets/img/motorreductores-y-reductores-de-engranajes.jpeg" alt="Motorreductores y reductores" /></div><div class="pcard__b"><h4>Motorreductores y reductores</h4><p>Reducen velocidad y multiplican torque en fajas transportadoras, mezcladoras y maquinaria de proceso.</p></div></div>
+      <div class="pcard"><div class="pcard__media"><img src="../src/assets/img/sopladores-regenerativos-de-canal-lateral-tipo-b.jpeg" alt="Sopladores" /></div><div class="pcard__b"><h4>Sopladores (blowers)</h4><p>Inyección de aire para aireación de aguas residuales, transporte neumático, secado y mezcla de materiales.</p></div></div>
+    </div>
+    <div class="hl">
+      <div>Alta eficiencia energética (IE2/IE3)</div>
+      <div>Diseñados para servicio continuo</div>
+      <div>Repuestos y reposición disponibles</div>
+    </div>
+    <div class="brands" style="margin-top:9mm;">
+      <div class="brands__label">Marcas con las que trabajamos</div>
+      <div class="brands__row">
+        <div class="chip"><img src="../src/assets/img/weg.png" alt="WEG" /></div>
+        <div class="chip"><img src="../src/assets/img/thompson.png" alt="Thompson" /></div>
+        <div class="chip"><img src="../src/assets/img/hercules.png" alt="Hercules" /></div>
+        <div class="chip"><img src="../src/assets/img/bonfiglioli.png" alt="Bonfiglioli" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="pn">SUINTEC · Suministros Industriales Tecnológicos — 05</div>
+</section>
+
+<!-- ===================== PAGE 6 — TABLEROS Y ACCESORIOS ===================== -->
+<section class="page">
+  <div class="pad" style="display:flex; flex-direction:column;">
+    <div class="rh"><img src="../src/assets/img/logo-suintec.png" alt="SUINTEC" /><span>Soluciones · Tableros y accesorios</span></div>
+    <div class="feature" style="margin-bottom:9mm;">
+      <div class="feature__txt">
+        <div class="eyebrow">Soluciones</div>
+        <h3>Tableros eléctricos</h3>
+        <p>Tableros de fuerza, control y distribución diseñados para mantener tu operación protegida y funcionando sin interrupciones, construidos con componentes de marcas líderes y probados en taller.</p>
+        <ul class="checks">
+          <li>Tableros de fuerza, control, distribución, transferencia y arranque de motores.</li>
+          <li>Componentes de marcas líderes en protección, maniobra, control y medición.</li>
+          <li>Dimensionamiento técnico y pruebas en taller para máxima seguridad.</li>
+        </ul>
+      </div>
+      <img src="../src/assets/img/tableros.webp" alt="Tableros eléctricos" />
+    </div>
+    <div class="brands" style="margin:0 0 9mm;">
+      <div class="brands__label">Marcas de componentes</div>
+      <div class="brands__row">
+        <div class="chip"><img src="../src/assets/img/schneider-electric.png" alt="Schneider Electric" /></div>
+        <div class="chip"><img src="../src/assets/img/abb.png" alt="ABB" /></div>
+        <div class="chip"><img src="../src/assets/img/siemens.png" alt="Siemens" /></div>
+        <div class="chip"><img src="../src/assets/img/chint-electric.png" alt="Chint Electric" /></div>
+        <div class="chip"><img src="../src/assets/img/ls-electric.png" alt="LS Electric" /></div>
+      </div>
+    </div>
+    <div class="feature rev">
+      <ul class="checks feature__txt">
+        <li>Tuberías, conexiones y accesorios de PVC, hierro y acero inoxidable.</li>
+        <li>Válvulas de compuerta, check, mariposa y regulación.</li>
+        <li>Sensores de nivel, presión, caudal y temperatura.</li>
+        <li>Instrumentación y dispositivos de medición para monitoreo de procesos.</li>
+        <li>Cables eléctricos, bandejas, prensaestopas y accesorios de tablero.</li>
+      </ul>
+      <img src="../src/assets/img/accesorios.webp" alt="Accesorios industriales" />
+    </div>
+    <h3 style="font-size:15pt; margin-top:5mm;">Accesorios industriales</h3>
+    <p style="font-size:9.7pt; color:var(--muted); max-width:150mm;">Complementamos cada sistema con los accesorios necesarios para una instalación completa y funcional: líneas de bombeo, redes hidráulicas, automatización y control de procesos.</p>
+  </div>
+  <div class="pn">SUINTEC · Suministros Industriales Tecnológicos — 06</div>
+</section>
+
+<!-- ===================== PAGE 7 — POR QUÉ ELEGIRNOS ===================== -->
+<section class="page">
+  <div class="pad">
+    <div class="rh"><img src="../src/assets/img/logo-suintec.png" alt="SUINTEC" /><span>Respaldo y proceso</span></div>
+    <div class="eyebrow">Por qué elegirnos</div>
+    <h2 class="sec-title">Respaldo técnico para tu operación</h2>
+    <p class="sec-sub">Combinamos calidad de producto, soporte técnico y una atención orientada a proyectos industriales reales.</p>
+    <div class="why" style="margin-top:7mm;">
+      <div class="why__c"><div class="why__ic">✓</div><h4>Calidad</h4><p>Suministros seleccionados para responder a condiciones industriales y proyectos de alta exigencia.</p></div>
+      <div class="why__c"><div class="why__ic">★</div><h4>Soporte técnico</h4><p>Orientación para elegir equipos compatibles con caudal, potencia, carga y entorno de operación.</p></div>
+      <div class="why__c"><div class="why__ic">◆</div><h4>Soluciones confiables</h4><p>Propuestas prácticas para continuidad operativa, mantenimiento y nuevas instalaciones.</p></div>
+      <div class="why__c"><div class="why__ic">●</div><h4>Atención especializada</h4><p>Comunicación directa con contratistas, ingenieros, compras y empresas industriales.</p></div>
+    </div>
+    <div class="eyebrow">Cómo trabajamos</div>
+    <h3 style="font-size:17pt; margin-bottom:5mm;">Un proceso claro de principio a fin</h3>
+    <div class="steps">
+      <div class="step"><b>1</b><h4>Consulta</h4><p>Nos cuentas tu requerimiento: caudal, presión y condiciones de operación.</p></div>
+      <div class="step"><b>2</b><h4>Selección técnica</h4><p>Definimos el equipo correcto según tu aplicación y entorno.</p></div>
+      <div class="step"><b>3</b><h4>Suministro</h4><p>Entregamos el equipo con respaldo de marcas líderes y garantía.</p></div>
+      <div class="step"><b>4</b><h4>Postventa</h4><p>Acompañamiento, repuestos y soporte técnico continuo.</p></div>
+    </div>
+  </div>
+  <div class="pn">SUINTEC · Suministros Industriales Tecnológicos — 07</div>
+</section>
+
+<!-- ===================== PAGE 8 — CONTRAPORTADA ===================== -->
+<section class="page">
+  <div class="back">
+    <div class="back__in">
+      <img class="back__logo" src="../src/assets/img/logo-suintec.png" alt="SUINTEC" />
+      <h2>¿Necesitas una <span class="accent">cotización</span> para tu proyecto?</h2>
+      <p class="back__lead">Cuéntanos qué equipo o sistema necesitas y nuestro equipo comercial te ayudará a definir la mejor alternativa.</p>
+      <div class="contact">
+        <div><b>WhatsApp</b>+51 955 483 364</div>
+        <div><b>Correo</b>ventas@suintecperu.com</div>
+        <div><b>Dirección</b>Garcilazo de la Vega, Urb. Salamanca, Ate, Lima</div>
+        <div><b>Horario</b>Lunes a Sábado, 8:00 am – 6:00 pm</div>
+        <div><b>Web</b>www.suintecperu.com</div>
+        <div><b>Atención</b>Asesoría técnica y cotización directa</div>
+      </div>
+      <div class="back__cta" style="display:flex; align-items:center; gap:9mm; flex-wrap:wrap;">
+        <a href="https://www.suintecperu.com">Cotiza ahora</a>
+        <div style="display:flex; align-items:center; gap:4mm;">
+          <div class="qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;margin=0&amp;data=https%3A%2F%2Fwww.suintecperu.com" alt="QR suintecperu.com" /></div>
+          <span style="font-size:9pt; color:#aeb6b1; max-width:36mm;">Escanéa y visita suintecperu.com</span>
+        </div>
+      </div>
+      <div class="back__foot">
+        <span>© 2026 SUINTEC. Todos los derechos reservados.</span>
+        <span>Suministros Industriales Tecnológicos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
