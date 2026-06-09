@@ -1,10 +1,21 @@
 import { useEffect, useRef } from "react";
 
+const SPEED_PX_PER_SEC = 45;
+
 function LogoCarousel({ logos, label }) {
   const loop = [...logos, ...logos];
   const viewportRef = useRef(null);
   const trackRef = useRef(null);
-  const state = useRef({ raf: 0, paused: false, dragging: false, startX: 0, startScroll: 0, half: 0, moved: false });
+  const state = useRef({
+    raf: 0,
+    paused: false,
+    dragging: false,
+    startX: 0,
+    startPos: 0,
+    pos: 0,
+    half: 0,
+    last: 0,
+  });
 
   useEffect(() => {
     const viewport = viewportRef.current;
@@ -15,7 +26,6 @@ function LogoCarousel({ logos, label }) {
 
     const s = state.current;
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const speed = 0.5;
 
     const computeHalf = () => {
       s.half = track.scrollWidth / 2;
@@ -25,13 +35,20 @@ function LogoCarousel({ logos, label }) {
     const resizeObserver = new ResizeObserver(computeHalf);
     resizeObserver.observe(track);
 
-    const tick = () => {
+    const wrap = (value) => {
+      if (s.half <= 0) {
+        return value;
+      }
+      return ((value % s.half) + s.half) % s.half;
+    };
+
+    const tick = (now) => {
+      const dt = s.last ? Math.min(now - s.last, 64) : 16;
+      s.last = now;
+
       if (!reduceMotion && !s.paused && !s.dragging && s.half > 0) {
-        let next = viewport.scrollLeft + speed;
-        if (next >= s.half) {
-          next -= s.half;
-        }
-        viewport.scrollLeft = next;
+        s.pos = wrap(s.pos + (SPEED_PX_PER_SEC * dt) / 1000);
+        viewport.scrollLeft = s.pos;
       }
       s.raf = requestAnimationFrame(tick);
     };
@@ -40,6 +57,7 @@ function LogoCarousel({ logos, label }) {
     return () => {
       cancelAnimationFrame(s.raf);
       resizeObserver.disconnect();
+      s.last = 0;
     };
   }, [logos]);
 
@@ -57,9 +75,8 @@ function LogoCarousel({ logos, label }) {
     const s = state.current;
     s.dragging = true;
     s.paused = true;
-    s.moved = false;
     s.startX = event.clientX;
-    s.startScroll = viewportRef.current.scrollLeft;
+    s.startPos = s.pos;
     viewportRef.current.setPointerCapture?.(event.pointerId);
     viewportRef.current.classList.add("dragging");
   };
@@ -69,14 +86,11 @@ function LogoCarousel({ logos, label }) {
     if (!s.dragging) {
       return;
     }
-    const delta = event.clientX - s.startX;
-    if (Math.abs(delta) > 3) {
-      s.moved = true;
-    }
-    let next = s.startScroll - delta;
+    let next = s.startPos - (event.clientX - s.startX);
     if (s.half > 0) {
       next = ((next % s.half) + s.half) % s.half;
     }
+    s.pos = next;
     viewportRef.current.scrollLeft = next;
   };
 
